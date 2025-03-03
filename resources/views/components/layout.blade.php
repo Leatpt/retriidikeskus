@@ -93,6 +93,7 @@
                         class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
                 </div>
             </div> -->
+            @yield('navbar')
         </nav>
 
         <header class="bg-white shadow">
@@ -102,6 +103,7 @@
                     <x-button href="/events/create">Lisa Sündmus</x-button>
                 @endauth
             </div>
+            @yield('heading')
         </header>
 
         <main>

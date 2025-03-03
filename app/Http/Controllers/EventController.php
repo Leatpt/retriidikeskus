@@ -46,6 +46,7 @@ class EventController extends Controller
 
         $event = Event::create([
             'title' => request('title'),
+            'description' => request('description'),
             'start_date' => request('start_date'),
             'end_date' => request('end_date'),
             'start_time' => request('start_time'),
@@ -75,6 +76,7 @@ class EventController extends Controller
 
         $event->update([
             'title' => request('title'),
+            'description' => request('description'),
             'start_date' => request('start_date'),
             'end_date' => request('end_date'),
             'start_time' => request('start_time'),

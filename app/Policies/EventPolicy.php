@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Policies;
+
+use App\Models\Event;
+use App\Models\User;
+use Illuminate\Auth\Access\Response;
+
+class EventPolicy
+{
+    public function edit(User $user, Event $event): bool
+    {
+        return $event->user->is($user);
+    }
+}

@@ -15,19 +15,19 @@ class SessionController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'email' => ['required', 'email'],
+            'username' => ['required'],
             'password' => ['required']
         ]);
 
-        if (! Auth::attempt($attributes)) {
+        if (!Auth::attempt($attributes)) {
             throw ValidationException::withMessages([
-                'email' => 'Sorry, those credentials do not match.'
+                'username' => 'Sorry, those credentials do not match.'
             ]);
         }
 
         request()->session()->regenerate();
 
-        return redirect('/jobs');
+        return redirect('/events');
     }
 
     public function destroy()

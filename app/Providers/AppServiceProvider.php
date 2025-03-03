@@ -2,12 +2,13 @@
 
 namespace App\Providers;
 
-use App\Models\Job;
-use App\Models\User;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Carbon\Carbon;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,9 +26,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Model::preventLazyLoading();
-
-//        Gate::define('edit-job', function (User $user, Job $job) {
+        //        Gate::define('edit-job', function (User $user, Job $job) {
 //            return $job->employer->user->is($user);
 //        });
+
+        // Set Carbon's locale to Estonian
+        Carbon::setLocale('et');
+
+        // Set the PHP locale for time functions
+        setlocale(LC_TIME, 'et_EE.UTF-8'); // Ensures PHP's native time functions use Estonian
     }
 }

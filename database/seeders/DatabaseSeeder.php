@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Job;
+use App\Models\Event;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,11 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            'first_name' => 'John',
-            'last_name' => 'Doe',
+            'username' => 'Taunokas',
             'email' => 'test@example.com',
+            'password' => 'password'
         ]);
 
-        $this->call(JobSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(EventSeeder::class);
     }
 }

@@ -2,16 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Models\Job;
+use App\Models\Event;
 use Illuminate\Database\Seeder;
 
-class JobSeeder extends Seeder
+class EventSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Job::factory(200)->create();
+        Event::factory(20)->create();
     }
 }

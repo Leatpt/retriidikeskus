@@ -1,11 +1,11 @@
 <h2>
-    {{ $job->title }}
+    {{ $event->name }}
 </h2>
 
 <p>
-    Congrats! Your job is now live on our website.
+    Congrats! Your event is now live on our website.
 </p>
 
 <p>
-    <a href="{{ url('/jobs/' . $job->id) }}">View Your Job Listing</a>
+    <a href="{{ url('/events/' . $event->id) }}">View Your Event Listing</a>
 </p>

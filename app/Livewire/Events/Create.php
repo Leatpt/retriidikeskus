@@ -2,14 +2,19 @@
 
 namespace App\Livewire\Events;
 
-use App\Models\Category;
 use Livewire\Component;
 use Livewire\Attributes\On;
+use App\Models\Category;
 
 class Create extends Component
 {
     public $showModal = false;
+    public $categories = [];
 
+    public function mount()
+    {
+        $this->categories = Category::all();
+    }
 
     #[On('openModal')]
     public function openCreate()

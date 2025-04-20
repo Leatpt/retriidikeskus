@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home.index');
 
-Route::get('/events', Index::class);
+Route::get('/events', Index::class)->middleware('auth');
 
 
 

@@ -18,6 +18,12 @@ class Create extends Component
     public function mount()
     {
         $this->categories = Category::all();
+
+        // Set default time values
+        $this->form->start_time = '12:00';
+        $this->form->end_time = '12:00';
+        $this->form->start_date = today()->format('Y-m-d');
+        $this->form->end_date = today()->format('Y-m-d');
     }
 
     public function save()

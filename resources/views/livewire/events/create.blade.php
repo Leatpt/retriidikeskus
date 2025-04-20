@@ -76,11 +76,11 @@
                                         <x-form-label for="choose_times">Vali Kellaajad</x-form-label>
 
                                         <div class="mt-2 flex items-center space-x-2">
-                                            <x-form-input id="start_time" name="start_time" type="time" required wire:model="form.start_time" />
+                                            <x-form-input id="start_time" name="start_time" type="time" step="900" required wire:model="form.start_time" />
 
                                             <span>-</span>
 
-                                            <x-form-input name="end_time" id="end_time" type="time" wire:model="form.end_time" />
+                                            <x-form-input name="end_time" id="end_time" type="time" step="900" wire:model="form.end_time" />
 
                                             <x-form-error name="start_time" />
                                             <x-form-error name="end_time" />

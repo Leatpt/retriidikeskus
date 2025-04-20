@@ -10,8 +10,7 @@
     </div>
 
     <div id="kuukava" class="bg-white text-gray-800 py-16">
-        <x-calendar></x-calendar>
-        <div class="container mx-auto px-4">
+         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-4">About Us</h2>
             <p class="text-lg leading-relaxed">
                 This is the section after the hero. You can fill this with your content, images, or anything you need.

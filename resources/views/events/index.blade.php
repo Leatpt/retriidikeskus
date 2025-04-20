@@ -3,8 +3,12 @@
         Sündmuste Nimekiri
     </x-slot:heading>
 
+    <x-slot:button>
+        <x-button>Lisa Sündmus
+        </x-button>
+    </x-slot:button>
+
     <div class="space-y-4">
-        <livewire:events.create />
         <table class="min-w-full table-auto border-collapse border border-gray-300">
             <!-- Table Header -->
             <thead class="bg-gray-100">

@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class Create extends Component
 {
+    public $showModal = false;
+
     public function create()
     {
         $categories = Category::all();

@@ -15,13 +15,9 @@ class Index extends Component
 
     public $showModal = false;
 
-
-    public function openCreate()
+    public function addEvent()
     {
-        $this->showModal = true;
-        return view('livewire.events.create', [
-            'events' => Event::with('category')->paginate(10),
-        ]);
+        $this->dispatch('openModal');
     }
 
     public function render()

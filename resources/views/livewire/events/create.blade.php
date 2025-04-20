@@ -1,8 +1,9 @@
-<div class="showModal ? 'block' : 'hidden'">
+<div class="{{ $showModal ? 'block' : 'hidden' }}">
     <div class="fixed z-50 inset-0">
-        <div class="fixed inset-0 bg-emerald-100 opacity-400">
-            <div class="flex justify-center items-center min-h-screen px-4">
-                <form method="POST" action="/events" class="w-full max-w-xl">
+        <div class="flex justify-center items-center min-h-screen px-4">
+            <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="closeCreate"></div>
+            <div class="z-50 w-full max-w-3xl bg-white rounded-lg shadow-lg p-6" wire:click.stop>
+                <form method="POST" action="/events" class="w-full">
                     @csrf
 
                     <div class="space-y-12">
@@ -102,5 +103,6 @@
                 </form>
             </div>
         </div>
+
     </div>
 </div>

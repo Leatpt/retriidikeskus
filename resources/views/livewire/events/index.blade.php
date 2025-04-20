@@ -2,12 +2,10 @@
         <div class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">Sündmused</h1>
-                <x-button wire:click="openCreate">Lisa Sündmus</x-button>
+                <x-button type="submit" wire:click="addEvent">Lisa Sündmus</x-button>
             </div>
         </div>
-        @if ($showModal)
-        <livewire:events.create wire:key="create-event" />
-        @endif
+        @livewire('events.create')
         <div class="space-y-4">
             <table class="min-w-full table-auto border-collapse border border-gray-300">
                 <!-- Table Header -->

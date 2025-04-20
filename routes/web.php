@@ -2,12 +2,13 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\SessionController;
-use App\Models\Event;
 use App\Livewire\Events\Index;
+use App\Livewire\Events\Create;
 use Illuminate\Support\Facades\Route;
 
 
 Route::view('/', 'home.index');
+
 Route::get('/events', Index::class);
 
 

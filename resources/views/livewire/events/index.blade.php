@@ -1,8 +1,8 @@
-    <div>
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <div class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">Sündmused</h1>
-                <x-button type="submit" wire:click="addEvent">Lisa Sündmus</x-button>
+                <x-form-button type="submit" wire:click="addEvent">Lisa Sündmus</x-form-button>
             </div>
         </div>
         @livewire('events.create')

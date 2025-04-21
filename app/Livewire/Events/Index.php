@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Event;
 use Livewire\Attributes\Layout;
 use Livewire\WithPagination;
-use Livewire\Attributes\On;
+
 
 #[Layout('components.layouts.app')]
 class Index extends Component

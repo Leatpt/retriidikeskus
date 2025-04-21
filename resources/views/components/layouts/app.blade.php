@@ -10,19 +10,20 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <link rel="icon" type="image/png" href="{{ asset('Logo.png') }}">
+
     @livewireStyles
 
 </head>
 
 <body class="h-full" x-data x-on:click="">
     <div class="min-h-full">
-        <nav class="bg-gray-800">
+        <nav class="bg-lime-100 shadow-md sticky top-0">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img class="h-8 w-8" src="https://laracasts.com/images/logo/logo-triangle.svg"
-                                alt="Your Company">
+                            <img class="h-10 w-10" src="{{ asset('Logo.png') }}" alt="Retriidikeskus">
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
@@ -56,7 +57,9 @@
                             <form method="POST" action="/logout">
                                 @csrf
 
-                                <x-form-button>Logi Välja</x-form-button>
+                                <button class="rounded-md bg-rose-200 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-rose-300" type="submit">
+                                    Logi Välja
+                                </button>
                             </form>
                             @endauth
                         </div>
@@ -100,7 +103,7 @@
 
 
         <main>
-            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            <div class="">
                 {{ $slot }}
             </div>
         </main>

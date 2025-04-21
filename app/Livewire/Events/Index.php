@@ -20,10 +20,17 @@ class Index extends Component
         $this->dispatch('openModal');
     }
 
+    public function delete(Event $event)
+    {
+        $event->delete();
+        unset($this->events);
+        session()->flash('message', 'Sündmus edukalt kustutatud.');
+    }
+
     public function render()
     {
         return view('livewire.events.index', [
-            'events' => Event::with('category')->paginate(10),
+            'events' => Event::with('category')->paginate(20),
         ]);
     }
 }

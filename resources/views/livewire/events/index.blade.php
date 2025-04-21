@@ -64,16 +64,10 @@
                                     <x-eva-edit-outline class="w-5 h-5 text-blue-500 hover:text-blue-700" />
                                 </button>
 
-                                <!-- Delete button submits a form -->
-                                <form method="POST" action="{{ route('events.destroy', $event->id) }}"
-                                    onsubmit="return confirm('Oled kindel, et soovid kustutada?')">
-                                    @csrf
-                                    @method('DELETE')
-
-                                    <button type="submit" class="w-10 h-10 flex items-center justify-center"
-                                        title="Kustuta">
-                                        <x-eva-trash-outline class="w-5 h-5 text-red-500 hover:text-red-700" />
-                                    </button>
+                                <button class="w-10 h-10 flex items-center justify-center"
+                                    title="Kustuta" wire:click="delete({{ $event->id }})" wire:confirm="Kas olete kindel, et soovite selle sündmuse kustutada?">
+                                    <x-eva-trash-outline class="w-5 h-5 text-red-500 hover:text-red-700" />
+                                </button>
                                 </form>
                             </div>
                         </td>

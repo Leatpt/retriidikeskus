@@ -62,12 +62,12 @@
                                 <!-- Edit button links to edit page -->
                                 <button type="button" class="edit-btn w-10 h-10 flex items-center justify-center"
                                     title="Muuda" wire:click="editEvent({{ $event->id }})">
-                                    <x-eva-edit-outline class="w-5 h-5 text-blue-500 hover:text-blue-700" />
+                                    <x-coolicon-edit-pencil-01 class="w-5 h-5 text-emerald-500 hover:text-emerald-700" />
                                 </button>
 
                                 <button class="w-10 h-10 flex items-center justify-center"
                                     title="Kustuta" wire:click="delete({{ $event->id }})" wire:confirm="Kas olete kindel, et soovite selle sündmuse kustutada?">
-                                    <x-eva-trash-outline class="w-5 h-5 text-red-500 hover:text-red-700" />
+                                    <x-coolicon-trash-full class="w-5 h-5 text-red-500 hover:text-red-700" />
                                 </button>
                                 </form>
                             </div>

@@ -20,9 +20,9 @@ class Index extends Component
         $this->dispatch('openCreate');
     }
 
-    public function editEvent()
+    public function editEvent(Event $event)
     {
-        $this->dispatch('openEdit');
+        $this->dispatch('openEdit', id: $event->id);
     }
 
     public function delete(Event $event)

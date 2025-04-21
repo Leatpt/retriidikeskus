@@ -39,9 +39,8 @@ class EventFactory extends Factory
             'location' => 'Oru Mõis',
             'start_date' => fake()->dateTimeBetween(Carbon::now(), Carbon::now()->addYear())->format('Y-m-d'), // Date between now and one year
             'end_date' => fake()->dateTimeBetween(Carbon::now(), Carbon::now()->addYear())->format('Y-m-d'),
-            'start_time' => fake()->time(),
+            'start_time' => fake()->time('H:i'),
             'user_id' => User::first()->id,
         ];
     }
 }
-

@@ -19,7 +19,6 @@ class Edit extends Component
     public function mount(Event $event)
     {
         $this->categories = Category::all();
-        $this->form->setEvent($event);
     }
 
     public function save()
@@ -29,8 +28,10 @@ class Edit extends Component
     }
 
     #[On('openEdit')]
-    public function openEdit()
+    public function openEdit($id)
     {
+        $event = Event::findOrFail($id);
+        $this->form->setEvent($event);
         $this->showModal = true;
     }
 

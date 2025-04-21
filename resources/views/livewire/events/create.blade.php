@@ -11,10 +11,11 @@
                             <div class="grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-8">
                                 <div class="sm:col-span-6">
                                     <x-form-field>
-                                        <x-form-label for="title">Pealkiri</x-form-label>
+                                        <x-form-label for="title" wire:dirty.class="text-amber-600" wire:target="form.title">Pealkiri</x-form-label>
+                                        <span class="text-amber-600" wire:dirty wire:target="form.title">*</span>
 
                                         <div class="mt-2">
-                                            <x-form-input name="title" id="title" placeholder="Retriit" type="text" required wire:model="form.title" />
+                                            <x-form-input name="title" id="title" type="text" required wire:model="form.title" />
 
                                             <x-form-error name="title" />
                                         </div>

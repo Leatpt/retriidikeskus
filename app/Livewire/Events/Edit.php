@@ -2,44 +2,40 @@
 
 namespace App\Livewire\Events;
 
-use App\Livewire\Forms\EventForm;
 use Livewire\Component;
+use App\Livewire\Forms\EventForm;
+use App\Models\Event;
 use Livewire\Attributes\On;
 use App\Models\Category;
 
 
-
-class Create extends Component
+class Edit extends Component
 {
     public $showModal = false;
     public $categories = [];
     public EventForm $form;
 
 
-    public function mount()
+    public function mount(Event $event)
     {
         $this->categories = Category::all();
-
-        $this->form->start_time = '12:00';
-        $this->form->end_time = '12:00';
-        $this->form->start_date = today()->format('Y-m-d');
-        $this->form->end_date = today()->format('Y-m-d');
+        $this->form->setEvent($event);
     }
 
     public function save()
     {
-        $this->form->store();
+        $this->form->update();
         $this->redirect('/events', navigate: true);
     }
 
-    #[On('openCreate')]
-    public function openCreate()
+    #[On('openEdit')]
+    public function openEdit()
     {
         $this->showModal = true;
     }
 
     public function render()
     {
-        return view('livewire.events.create');
+        return view('livewire.events.edit');
     }
 }

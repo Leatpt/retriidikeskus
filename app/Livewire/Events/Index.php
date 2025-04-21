@@ -4,9 +4,9 @@ namespace App\Livewire\Events;
 
 use Livewire\Component;
 use App\Models\Event;
-use App\Models\Category;
 use Livewire\Attributes\Layout;
 use Livewire\WithPagination;
+use Livewire\Attributes\On;
 
 #[Layout('components.layouts.app')]
 class Index extends Component
@@ -17,7 +17,12 @@ class Index extends Component
 
     public function addEvent()
     {
-        $this->dispatch('openModal');
+        $this->dispatch('openCreate');
+    }
+
+    public function editEvent()
+    {
+        $this->dispatch('openEdit');
     }
 
     public function delete(Event $event)
@@ -30,7 +35,7 @@ class Index extends Component
     public function render()
     {
         return view('livewire.events.index', [
-            'events' => Event::with('category')->paginate(20),
+            'events' => Event::with('category')->paginate(20, pageName: 'events-page'),
         ]);
     }
 }

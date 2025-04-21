@@ -6,6 +6,7 @@
             </div>
         </div>
         @livewire('events.create')
+        @livewire('events.edit')
         <div class="space-y-4">
             <table class="min-w-full table-auto border-collapse border border-gray-300">
                 <!-- Table Header -->
@@ -60,7 +61,7 @@
                             <div class="inline-flex items-center"> <!-- Adjusted space between buttons -->
                                 <!-- Edit button links to edit page -->
                                 <button type="button" class="edit-btn w-10 h-10 flex items-center justify-center"
-                                    data-event-id="{{ $event->id }}" title="Muuda">
+                                    title="Muuda" wire:click="editEvent({{ $event->id }})">
                                     <x-eva-edit-outline class="w-5 h-5 text-blue-500 hover:text-blue-700" />
                                 </button>
 

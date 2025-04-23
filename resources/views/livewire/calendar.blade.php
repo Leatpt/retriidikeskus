@@ -1,6 +1,14 @@
 <div>
-    <div class="items-center justify-center flex flex-col mb-2">
-        <h2 class="capitalize">{{ \Carbon\Carbon::create($year, $month, 1)->locale('et')->isoFormat('MMMM YYYY') }}</h2>
+    <div class="items-center justify-center mb-2 flex-row gap-2 flex">
+        <div class="flex items-center justify-center" wire:click="previousMonth">
+            <x-coolicon-caret-right-sm class="w-7 h-7 text-lime-500 hover:text-lime-700 transform -scale-x-100" />
+        </div>
+        <div>
+            <h2 class="capitalize">{{ \Carbon\Carbon::create($year, $month, 1)->locale('et')->isoFormat('MMMM YYYY') }}</h2>
+        </div>
+        <div class="flex items-center justify-center" wire:click="nextMonth">
+            <x-coolicon-caret-right-sm class="w-7 h-7 text-lime-500 hover:text-lime-700" />
+        </div>
     </div>
     <div>
         <table>

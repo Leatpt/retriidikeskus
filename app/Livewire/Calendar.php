@@ -12,12 +12,10 @@ class Calendar extends Component
     public $year;
     public $selectedDate;
     public $events = [];
+    public $monthOffset = 0;
 
-    public function mount()
-    {
-        $this->month = date('m');
-        $this->year = date('Y');
-    }
+
+    public function mount() {}
 
     public function getEventsForDate($date)
     {
@@ -31,9 +29,26 @@ class Calendar extends Component
         return $this->selectedDate === $date;
     }
 
+    public function nextMonth()
+    {
+        if ($this->monthOffset < 2) {
+            $this->monthOffset++;
+        }
+    }
+
+    public function previousMonth()
+    {
+        if ($this->monthOffset > 0) {
+            $this->monthOffset--;
+        }
+    }
 
     public function render()
     {
+        $baseDate = Carbon::now()->startOfMonth()->addMonths($this->monthOffset);
+        $this->month = $baseDate->month;
+        $this->year = $baseDate->year;
+
         $calendar = [];
 
         $firstDay = Carbon::create($this->year, $this->month, 1);

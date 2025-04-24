@@ -16,8 +16,8 @@
     </div>
 
     <div id="kuukava" class="bg-rose-100 text-gray-800 py-16">
-        <div>
-            <h1 class="flex items-center justify-center mb-8">Tulevad sündmused</h1>
+        <div class="">
+            <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-800 font-bold">Tulevad sündmused</h1>
         </div>
 
         <div
@@ -34,7 +34,7 @@
                 <div
 
                     class="flex items-center justify-center rounded-full bg-white shadow-lg w-96 h-96">
-                    <div class="overflow-auto w-full h-full flex items-center justify-center p-4 w-5/6 h-5/6 border-4 border-lime-200 border-dotted rounded-full">
+                    <div class="overflow-auto w-full h-full flex items-center justify-center p-4 w-5/6 h-5/6 rounded-full">
                         <livewire:event-details />
                     </div>
                 </div>

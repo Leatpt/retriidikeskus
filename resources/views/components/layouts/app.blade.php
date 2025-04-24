@@ -18,7 +18,7 @@
 
 <body class="h-full" x-data x-on:click="">
     <div class="min-h-full">
-        <nav class="bg-lime-100 shadow-md sticky top-0 z-50">
+        <nav class="bg-lime-100 border-b-2 border-gray-700 border-dotted sticky top-0 z-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">

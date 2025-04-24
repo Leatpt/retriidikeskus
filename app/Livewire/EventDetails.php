@@ -34,6 +34,11 @@ class EventDetails extends Component
         }
     }
 
+    public function openEventDetails(Event $event)
+    {
+        $this->dispatch('openEventDetails', id: $event->id);
+    }
+
     public function loadEventsForDate($date)
     {
         $this->selectedDate = $date;

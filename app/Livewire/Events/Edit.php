@@ -16,7 +16,7 @@ class Edit extends Component
     public EventForm $form;
 
 
-    public function mount(Event $event)
+    public function mount()
     {
         $this->categories = Category::all();
     }

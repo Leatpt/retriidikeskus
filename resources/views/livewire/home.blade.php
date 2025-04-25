@@ -1,7 +1,7 @@
 <div>
     <div class="bg-rose-100 relative overflow-hidden">
         <div class="min-h-screen flex items-center justify-center bg-lime-50 text-white rounded-br-full">
-            <div class="text-center w-full text-gray-900">
+            <div class="text-center w-full text-gray-700">
                 <h1 class="text-5xl font-bold">Welcome to My Website</h1>
                 <p class="mt-4 text-lg">Scroll down to learn more</p>
             </div>
@@ -15,30 +15,30 @@
         </button>
     </div>
 
-    <div id="kuukava" class="bg-rose-100 text-gray-800 py-16">
-        <div class="">
-            <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-800 font-bold">Tulevad sündmused</h1>
+    <div id="kuukava" class="pt-20 bg-rose-100 text-gray-700 py-16 -mt-44">
+        <div class="mt-32">
+            <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-700 font-bold">Tulevad sündmused</h1>
         </div>
 
         <div
             class="flex flex-row items-center justify-center gap-6 w-full mb-12">
-            <div class="wheel-left">
-                <div
-                    class="flex items-center justify-center rounded-full bg-white shadow-lg w-96 h-96">
-                    <div class="overflow-auto w-full h-full flex items-center justify-center p-4">
-                        <livewire:calendar />
+            <div class="flex flex-row items-center justify-center gap-6 w-full mb-12">
+                <div class="wheel-left relative w-96 h-96">
+                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10">
+                        <div class="overflow-auto w-full h-full flex items-center justify-center p-4">
+                            <livewire:calendar />
+                        </div>
+                    </div>
+                </div>
+                <div class="wheel-right relative w-96 h-96">
+                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10">
+                        <div class="overflow-auto w-full h-full flex items-center justify-center p-4 w-5/6 h-5/6 rounded-full">
+                            <livewire:event-details />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="wheel-right">
-                <div
 
-                    class="flex items-center justify-center rounded-full bg-white shadow-lg w-96 h-96">
-                    <div class="overflow-auto w-full h-full flex items-center justify-center p-4 w-5/6 h-5/6 rounded-full">
-                        <livewire:event-details />
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="bg-rose-100">

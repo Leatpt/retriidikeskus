@@ -1,13 +1,28 @@
 <div>
     <div class="items-center justify-center mb-2 flex-row gap-2 flex">
-        <div class="flex items-center justify-center" wire:click="previousMonth">
-            <x-coolicon-caret-right-sm class="w-7 h-7 text-lime-500 hover:text-lime-700 transform -scale-x-100" />
+        <div class="flex items-center justify-center">
+            @if ($monthOffset > 0)
+            <x-coolicon-caret-right-sm
+                class="w-7 h-7 text-lime-500 hover:text-lime-700 transform -scale-x-100"
+                wire:click="previousMonth" />
+            @else
+            <x-coolicon-caret-right-sm
+                class="w-7 h-7 text-gray-300 transform -scale-x-100" disabled />
+            @endif
         </div>
-        <div>
-            <h2 class="capitalize">{{ \Carbon\Carbon::create($year, $month, 1)->locale('et')->isoFormat('MMMM YYYY') }}</h2>
+        <div class="pointer-events-none">
+            <h2 class="capitalize font-semibold">{{ \Carbon\Carbon::create($year, $month, 1)->locale('et')->isoFormat('MMMM YYYY') }}</h2>
         </div>
-        <div class="flex items-center justify-center" wire:click="nextMonth">
-            <x-coolicon-caret-right-sm class="w-7 h-7 text-lime-500 hover:text-lime-700" />
+        <div class="flex items-center justify-center">
+            @if ($monthOffset
+            < 2)
+                <x-coolicon-caret-right-sm
+                class="w-7 h-7 text-lime-500 hover:text-lime-700"
+                wire:click="nextMonth" />
+            @else
+            <x-coolicon-caret-right-sm
+                class="w-7 h-7 text-gray-300" disabled />
+            @endif
         </div>
     </div>
     <div>

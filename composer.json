@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "codeat3/blade-coolicons": "^1.6",
+        "davidhsianturi/blade-bootstrap-icons": "^2.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.6"

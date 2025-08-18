@@ -10,7 +10,7 @@ export default {
             colors: {
                 "laracasts": "rgb(50,138,241)"
             }
-        },
+                },
     },
     plugins: [],
 }

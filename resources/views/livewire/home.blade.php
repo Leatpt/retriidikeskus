@@ -1,9 +1,13 @@
 <div>
     <div class="bg-rose-100 relative overflow-hidden">
-        <div class="min-h-screen flex items-center justify-center bg-lime-50 text-white rounded-br-full">
-            <div class="text-center w-full text-gray-700">
-                <h1 class="text-5xl font-bold">Welcome to My Website</h1>
-                <p class="mt-4 text-lg">Scroll down to learn more</p>
+        <div class="min-h-screen relative bg-lime-50 text-white rounded-br-full overflow-hidden">
+            <img
+                src="{{ asset('oruMainPicture.jpg') }}"
+                alt="welcomeImage"
+                class="absolute inset-0 w-full h-full object-cover z-0">
+            <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]"></div>
+            <div class="relative z-10 flex items-center justify-center h-full">
+                <h1 class="text-3xl font-bold text-gray-700">Welcome</h1>
             </div>
         </div>
         <div class="pointer-events-none absolute bottom-10 right-10 z-0 flex items-center justify-center">
@@ -24,7 +28,7 @@
             class="flex flex-row items-center justify-center gap-6 w-full mb-12">
             <div class="flex flex-row items-center justify-center gap-6 w-full mb-12">
                 <div class="wheel-left relative w-96 h-96">
-                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10">
+                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10 ">
                         <div class="overflow-auto w-full h-full flex items-center justify-center p-4">
                             <livewire:calendar />
                         </div>
@@ -47,7 +51,8 @@
                     <div class="mt-32">
                         <h2 class="text-3xl font-bold mb-4">Meist</h2>
                         <p class="text-lg leading-relaxed">
-                            Another section with more content.
+                            Sihtasutus Oru Evangeelne Rahvaõpistu (reg. nr. 90014856) on asutanud EELK Tuhala Kaarli kogudus (reg. nr. 80210154). Rahvaõpistu ehk koolituskeskuse põhisuunaks on kristliku süvatraditsiooni tutvustamine läbi erinevate õpikodade: KASVU-ÕPIKODA, VAIKUSE ÕPIKODA (retriit), VAIKUSE RÄNNAK, laagrid, teemapäevadd, talgud ja töötoad…
+                            RAHVAÕPISTU on asutatud Tuhala kogudusele kuuluva Oru mõisa kordategemiseks ja korrashoidmiseks.
                         </p>
                     </div>
                 </div>

@@ -6,5 +6,24 @@ html {
   scroll-padding-top: 4rem; /* adjust to navbar height */
 }
 
-  
+  /* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #ECFCCB; /* Track color */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #157c48; /* Thumb color */
+    border-radius: 6px;
+    border: 3px solid #ECFCCB; /* Adds padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #157c48; /* Thumb hover color */
+}
+
   

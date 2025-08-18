@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @source "../node_modules/flowbite-datepicker";
 
+html {
+  scroll-behavior: smooth; /* smooth scroll */
+  scroll-padding-top: 4rem; /* adjust to navbar height */
+}
 
   
   

@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-rose-100 relative overflow-hidden">
+    <div id="top" class="bg-rose-100 relative overflow-hidden">
         <div class="min-h-screen relative bg-lime-50 text-white rounded-br-full overflow-hidden">
             <img
                 src="{{ asset('oruMainPicture.jpg') }}"
@@ -7,7 +7,7 @@
                 class="absolute inset-0 w-full h-full object-cover z-0">
             <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]"></div>
             <div class="relative z-10 flex items-center justify-center h-full">
-                <h1 class="text-3xl font-bold text-gray-700">Welcome</h1>
+                <h1 class="text-3xl font-bold text-white"></h1>
             </div>
         </div>
         <div class="pointer-events-none absolute bottom-10 right-10 z-0 flex items-center justify-center">
@@ -18,6 +18,20 @@
             Retriidile
         </button>
     </div>
+
+    <div x-data="{ show: false }"
+        x-on:scroll.window="show = window.pageYOffset > 200">
+        <a
+            href="#"
+            x-show="show"
+            x-transition
+            x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            class="fixed bottom-5 right-5 bg-none text-3xl text-rose-300 px-3 py-2 rounded-full outline-2 hover:text-rose-500 transition">
+            ↑
+        </a>
+    </div>
+
+
 
     <div id="kuukava" class="pt-20 bg-rose-100 text-gray-700 py-16 -mt-44">
         <div class="mt-32">

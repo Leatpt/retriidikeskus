@@ -6,15 +6,15 @@
                 alt="welcomeImage"
                 class="absolute inset-0 w-full h-full object-cover z-0">
             <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]"></div>
-            <div class="relative z-10 flex items-center justify-center h-full">
-                <h1 class="text-3xl font-bold text-white"></h1>
+            <div class="relative z-10 flex flex-col start-left justify-center h-screen px-4 sm:px-6 lg:px-8">
+                <h1 class="text-9xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
             </div>
         </div>
-        <div class="pointer-events-none absolute bottom-10 right-10 z-0 flex items-center justify-center">
+        <div class="pointer-events-none absolute bottom-10 right-10 z-15 flex items-center justify-center">
             <img class="w-60 h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
         </div>
 
-        <button class="bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-24 z-10 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110">
+        <button class="bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110">
             Retriidile
         </button>
     </div>
@@ -26,7 +26,7 @@
             x-show="show"
             x-transition
             x-on:click.prevent="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            class="fixed bottom-5 right-5 bg-none text-3xl text-rose-300 px-3 py-2 rounded-full outline-2 hover:text-rose-500 transition">
+            class="fixed bottom-5 right-5 bg-none text-3xl text-rose-400 px-3 py-2 rounded-full outline-2 hover:text-rose-600 transition">
             ↑
         </a>
     </div>
@@ -60,14 +60,19 @@
         </div>
 
         <div class="bg-rose-100">
-            <div class="bg-lime-100 py-16 rounded-tr-full min-h-screen rounded-br-full">
-                <div id="meist" class="container mx-auto px-4 py-16 -mt-44">
-                    <div class="mt-32">
-                        <h2 class="text-3xl font-bold mb-4">Meist</h2>
-                        <p class="text-lg leading-relaxed">
-                            Sihtasutus Oru Evangeelne Rahvaõpistu (reg. nr. 90014856) on asutanud EELK Tuhala Kaarli kogudus (reg. nr. 80210154). Rahvaõpistu ehk koolituskeskuse põhisuunaks on kristliku süvatraditsiooni tutvustamine läbi erinevate õpikodade: KASVU-ÕPIKODA, VAIKUSE ÕPIKODA (retriit), VAIKUSE RÄNNAK, laagrid, teemapäevadd, talgud ja töötoad…
-                            RAHVAÕPISTU on asutatud Tuhala kogudusele kuuluva Oru mõisa kordategemiseks ja korrashoidmiseks.
-                        </p>
+            <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
+                <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-row">
+                        <div class="w-1/2">
+                            <h2 class="text-3xl font-bold mb-4">Meist</h2>
+                            <p class="text-lg leading-relaxed">
+                                Sihtasutus Oru Evangeelne Rahvaõpistu (reg. nr. 90014856) on asutanud EELK Tuhala Kaarli kogudus (reg. nr. 80210154). Rahvaõpistu ehk koolituskeskuse põhisuunaks on kristliku süvatraditsiooni tutvustamine läbi erinevate õpikodade: KASVU-ÕPIKODA, VAIKUSE ÕPIKODA (retriit), VAIKUSE RÄNNAK, laagrid, teemapäevad, talgud ja töötoad…
+
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                RAHVAÕPISTU on asutatud Tuhala kogudusele kuuluva Oru mõisa kordategemiseks ja korrashoidmiseks.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

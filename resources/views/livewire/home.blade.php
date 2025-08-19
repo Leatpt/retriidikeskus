@@ -61,17 +61,26 @@
 
         <div class="bg-rose-100">
             <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
-                <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-row">
-                        <div class="w-1/2">
+                <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+                    <div class="flex flex-row items-stretch">
+                        <div class="w-full lg:w-1/2">
                             <h2 class="text-3xl font-bold mb-4">Meist</h2>
-                            <p class="text-lg leading-relaxed">
-                                Sihtasutus Oru Evangeelne Rahvaõpistu (reg. nr. 90014856) on asutanud EELK Tuhala Kaarli kogudus (reg. nr. 80210154). Rahvaõpistu ehk koolituskeskuse põhisuunaks on kristliku süvatraditsiooni tutvustamine läbi erinevate õpikodade: KASVU-ÕPIKODA, VAIKUSE ÕPIKODA (retriit), VAIKUSE RÄNNAK, laagrid, teemapäevad, talgud ja töötoad…
-
+                            <p class="text-lg leading-relaxed text-justify">
+                                Sihtasutus Oru Evangeelne Rahvaõpistu (reg. nr. 90014856) on asutanud EELK Tuhala Kaarli kogudus (reg. nr. 80210154).
                             </p>
-                            <p class="text-lg leading-relaxed">
+                            <p class="mt-4 text-xl leading-relaxed text-justify">
+                                Rahvaõpistu ehk koolituskeskuse põhisuunaks on kristliku süvatraditsiooni tutvustamine läbi erinevate õpikodade: KASVU-ÕPIKODA, VAIKUSE ÕPIKODA (retriit), VAIKUSE RÄNNAK, laagrid, teemapäevad, talgud ja töötoad…
+                            </p>
+                            <p class="mt-4 text-lg leading-relaxed">
                                 RAHVAÕPISTU on asutatud Tuhala kogudusele kuuluva Oru mõisa kordategemiseks ja korrashoidmiseks.
                             </p>
+                        </div>
+                        <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">
+                            <div class="rounded-full overflow-hidden aspect-square max-h-[350px] border-4 border-rose-400">
+                                <img src="{{ asset('meist.jpg') }}"
+                                    alt="Oru mõis"
+                                    class="w-full h-full object-cover">
+                            </div>
                         </div>
                     </div>
                 </div>

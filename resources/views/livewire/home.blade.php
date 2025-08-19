@@ -240,12 +240,9 @@
         <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
             <div class="flex flex-row items-stretch">
                 <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
-                    <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="kirjuta">
-                        <a href=""
-                            target="_blank"><x-ionicon-mail class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>
-                    </div>
+                    <livewire:send-email-modal />
                 </div>
-                <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex cursor-pointer">
+                <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
                     <livewire:phone-number-modal />
                 </div>
                 <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">

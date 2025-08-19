@@ -1,5 +1,5 @@
 <div>
-    <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="helista"
+    <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800 cursor-pointer" alt="helista"
         wire:click="showPhoneNumberModal">
         <x-ionicon-call-sharp class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" />
     </div>
@@ -10,9 +10,6 @@
 
                 <div class="z-50 flex flex-col items-center w-1/2 min-h-[350px] bg-white rounded-md">
                     <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
-                        <div class="flex items-center justify-center aspect-square overflow-hidden border-4 border-emerald-600 rounded-full w-12">
-                            <x-ionicon-call-sharp class="text-emerald-600 w-8 h-8" />
-                        </div>
                         <div class="flex flex-col w-full ml-4">
                             <div class="flex items-start justify-between w-full">
                                 <h3 class="text-3xl font-bold mb-2 text-emerald-600 mt-1">Kontaktid</h3>

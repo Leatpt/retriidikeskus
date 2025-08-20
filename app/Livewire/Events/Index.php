@@ -50,6 +50,22 @@ class Index extends Component
         $this->selectAll = !array_diff($eventsOnPage, $this->selectedEvents);
     }
 
+    public function deleteSelected()
+    {
+        if (empty($this->selectedEvents)) {
+            session()->flash('error', 'Palun vali vähemalt üks sündmus.');
+            return;
+        }
+
+        Event::whereIn('id', $this->selectedEvents)->delete();
+
+        $this->selectedEvents = [];
+        $this->selectAll = false;
+
+        session()->flash('message', 'Valitud sündmused on kustutatud.');
+    }
+
+
 
     public function render()
     {

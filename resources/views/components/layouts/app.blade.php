@@ -57,7 +57,7 @@
                             <form method="POST" action="/logout">
                                 @csrf
 
-                                <button class="rounded-md bg-rose-200 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-rose-300" type="submit">
+                                <button class="rounded-md bg-rose-200 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-rose-300 cursor-pointer" type="submit">
                                     Logi Välja
                                 </button>
                             </form>

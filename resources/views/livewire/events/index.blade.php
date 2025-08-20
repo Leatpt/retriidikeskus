@@ -13,7 +13,7 @@
                 <thead class="bg-gray-100">
                     <tr>
                         <th class="px-4 py-2 text-left border-b border-gray-300">
-                            <input type="checkbox" class="form-checkbox" />
+                            <input type="checkbox" class="form-checkbox" wire:model.change="selectAll" />
                         </th>
                         <th class="px-4 py-2 text-left border-b border-gray-300">Pealkiri</th>
                         <th class="px-4 py-2 text-left border-b border-gray-300">Kategooria</th>
@@ -29,7 +29,7 @@
                     <tr class="hover:bg-gray-50">
                         <!-- Checkbox -->
                         <td class="px-4 py-2 border-b border-gray-300">
-                            <input type="checkbox" class="form-checkbox" />
+                            <input type="checkbox" class="form-checkbox" value="{{ $event->id }}" wire:model.change="selectedEvents" />
                         </td>
 
                         <!-- Title -->
@@ -62,12 +62,12 @@
                                 <!-- Edit button links to edit page -->
                                 <button type="button" class="edit-btn w-10 h-10 flex items-center justify-center"
                                     title="Muuda" wire:click="editEvent({{ $event->id }})">
-                                    <x-coolicon-edit-pencil-01 class="w-5 h-5 text-emerald-500 hover:text-emerald-700" />
+                                    <x-coolicon-edit-pencil-01 class="w-5 h-5 text-emerald-500 hover:text-emerald-700 cursor-pointer" />
                                 </button>
 
                                 <button class="w-10 h-10 flex items-center justify-center"
                                     title="Kustuta" wire:click="delete({{ $event->id }})" wire:confirm="Kas olete kindel, et soovite selle sündmuse kustutada?">
-                                    <x-coolicon-trash-full class="w-5 h-5 text-red-500 hover:text-red-700" />
+                                    <x-coolicon-trash-full class="w-5 h-5 text-red-500 hover:text-red-700 cursor-pointer" />
                                 </button>
                                 </form>
                             </div>

@@ -14,6 +14,8 @@ class Index extends Component
     use WithPagination;
 
     public $showModal = false;
+    public $selectedEvents = [];
+    public $selectAll = false;
 
     public function addEvent()
     {
@@ -31,6 +33,23 @@ class Index extends Component
         unset($this->events);
         session()->flash('message', 'Sündmus edukalt kustutatud.');
     }
+
+    public function updatedSelectAll()
+    {
+        if ($this->selectAll) {
+            $this->selectedEvents = Event::pluck('id')->toArray();
+        } else {
+            $this->selectedEvents = [];
+        }
+    }
+
+
+    public function updatedSelectedEvents()
+    {
+        $eventsOnPage = Event::paginate(20, pageName: 'events-page')->pluck('id')->toArray();
+        $this->selectAll = !array_diff($eventsOnPage, $this->selectedEvents);
+    }
+
 
     public function render()
     {

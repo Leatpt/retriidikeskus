@@ -47,6 +47,7 @@
                         class="
                     no-pointer-event select-none p-2 text-center w-10 h-10
                     {{ !$day['currentMonth'] ? 'text-gray-400' : '' }}
+                    {{ $day['today'] ? 'font-bold text-gray-800' : '' }}
                     {{ $day['hasEvent'] 
                     ? ($selectedDate === $day['date'] ? 'bg-rose-400 font-bold rounded-full' : 'rounded-full pointer-event bg-rose-300 hover:bg-rose-400 cursor-pointer transition-colors duration-200') 
                     : '' }}

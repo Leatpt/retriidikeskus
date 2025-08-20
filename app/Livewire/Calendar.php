@@ -13,6 +13,7 @@ class Calendar extends Component
     public $selectedDate;
     public $events = [];
     public $monthOffset = 0;
+    public $today;
 
 
     public function mount() {}
@@ -56,6 +57,7 @@ class Calendar extends Component
 
         $startDate = $firstDay->copy()->startOfWeek(Carbon::SUNDAY);
         $endDate = $lastDay->copy()->endOfWeek(Carbon::SATURDAY);
+        $today = Carbon::today()->toDateString();
 
         $currentDate = $startDate->copy();
 
@@ -75,6 +77,7 @@ class Calendar extends Component
                     'date' => $currentDate->format('Y-m-d'),
                     'currentMonth' => $currentDate->month == $this->month,
                     'hasEvent' => in_array($currentDate->format('Y-m-d'), $eventDates),
+                    'today' => $currentDate->format('Y-m-d') === $today,
                 ];
                 $currentDate->addDay();
             }

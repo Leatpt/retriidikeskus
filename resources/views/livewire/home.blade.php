@@ -61,7 +61,7 @@
 
         <div class="bg-rose-100">
             <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
-                <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+                <div id="meist" class="scroll-mt-50 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
                     <div class="flex flex-row items-stretch">
                         <div class="w-full lg:w-1/2">
                             <h2 class="text-3xl font-bold mb-4">Meist</h2>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div id="kajastused" class="bg-rose-100">
+        <div id="kajastused" class="bg-rose-100 scroll-mt-50">
             <div class="bg-rose-100 py-16">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
                     <div class="flex flex-row items-stretch">
@@ -153,9 +153,9 @@
                 </div>
             </div>
         </div>
-        <div id="opikojad" class="bg-rose-100">
+        <div id="opikojad" class="bg-rose-100 scroll-mt-20">
             <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
-                <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
                     <div class="flex flex-row items-stretch">
                         <div class="w-full lg:w-1/2">
                             <h2 class="text-3xl font-bold mb-6">Õpikojad</h2>
@@ -189,7 +189,7 @@
                 </div>
             </div>
         </div>
-        <div id="toetajad" class="bg-rose-100">
+        <div id="toetajad" class="bg-rose-100 scroll-mt-20">
             <div class="bg-rose-100 py-16">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
                     <div class="flex flex-row items-stretch">
@@ -223,7 +223,7 @@
                             <p class="text-lg leading-relaxed text-justify">
                                 Oru mõisahoone-kogudusemaja köögi renoveerimine
                             </p>
-                            <div class="inline-flex flex-row align-right mt-6 uppercase bg-rose-500 text-white font-bold rounded-full px-4 py-2 hover:bg-rose-700 cursor-pointer">
+                            <div class="inline-flex flex-row align-right mt-6 uppercase bg-emerald-600 text-white font-bold rounded-full px-4 py-2 hover:bg-emerald-700 cursor-pointer drop-shadow-[5px_5px_0px_rgba(0,85,59,1)] hover:drop-shadow-[7px_7px_0px_rgba(0,92,64,1)] transition duration-300">
                                 <x-coolicon-heart-01 class="w-8 h-8 mr-2 cursor-pointer" />
                                 <button class="uppercase cursor-pointer">Toeta Oru Rahvaõpistu Tegemisi</button>
                             </div>
@@ -235,9 +235,8 @@
             </div>
         </div>
     </div>
-    {{-- add a border like in the top --}}
-    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full">
-        <div id="meist" class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted">
+        <div class="scroll-mt-50 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
             <div class="flex flex-row items-stretch">
                 <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
                     <livewire:send-email-modal />

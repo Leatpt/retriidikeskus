@@ -10,11 +10,11 @@
                 <h1 class="text-9xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
             </div>
         </div>
-        <div class="pointer-events-none absolute bottom-10 right-10 z-15 flex items-center justify-center">
-            <img class="w-60 h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
+        <div class="pointer-events-none absolute bottom-16 sm:bottom-10 right-2 sm:right-10 z-15 flex items-center justify-center">
+            <img class="w-50 h-50 sm:w-60 sm:h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
         </div>
 
-        <button class=" cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110">
+        <button class="cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110">
             Retriidile
         </button>
     </div>
@@ -40,7 +40,7 @@
 
         <div
             class="flex flex-row items-center justify-center gap-6 w-full mb-12">
-            <div class="flex flex-row items-center justify-center gap-6 w-full mb-12">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 w-full mb-12">
                 <div class="wheel-left relative w-96 h-96">
                     <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10 ">
                         <div class="overflow-auto w-full h-full flex items-center justify-center p-4">
@@ -238,13 +238,13 @@
     <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted">
         <div class="scroll-mt-50 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
             <div class="flex flex-row items-stretch">
-                <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
+                <div class="w-1/3 px-6 flex items-center justify-center lg:flex">
                     <livewire:send-email-modal />
                 </div>
-                <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
+                <div class="w-1/3 px-6 flex items-center justify-center lg:flex">
                     <livewire:phone-number-modal />
                 </div>
-                <div class="w-1/3 px-6 flex items-center justify-center hidden lg:flex">
+                <div class="w-1/3 px-6 flex items-center justify-center lg:flex">
                     <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="leia meid">
                         <a href="https://www.google.com/maps/place/Oru+m%C3%B5is/@59.1898759,24.9831921,17z/data=!3m1!4b1!4m6!3m5!1s0x4692db7d85d3b6b5:0xa06618dd62804917!8m2!3d59.1898759!4d24.985767!16s%2Fg%2F11bywvxk7z?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"><x-ionicon-location class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>

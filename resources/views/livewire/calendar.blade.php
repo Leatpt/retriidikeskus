@@ -3,7 +3,7 @@
         <div class="flex items-center justify-center">
             @if ($monthOffset > 0)
             <x-coolicon-caret-right-sm
-                class="w-7 h-7 text-lime-500 hover:text-lime-700 transform -scale-x-100"
+                class="w-7 h-7 text-lime-500 hover:text-lime-700 transform -scale-x-100 cursor-pointer"
                 wire:click="previousMonth" />
             @else
             <x-coolicon-caret-right-sm
@@ -17,7 +17,7 @@
             @if ($monthOffset
             < 2)
                 <x-coolicon-caret-right-sm
-                class="w-7 h-7 text-lime-500 hover:text-lime-700"
+                class="w-7 h-7 text-lime-500 hover:text-lime-700 cursor-pointer"
                 wire:click="nextMonth" />
             @else
             <x-coolicon-caret-right-sm

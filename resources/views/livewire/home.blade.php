@@ -1,4 +1,4 @@
-<div class="relative bg-rose-100 overflow-visible">
+<div class="relative bg-rose-100 overflow-visible overflow-x-hidden">
     <div class="pointer-events-none absolute top-200 left-0 w-full h-[1300px] z-0">
         <img src="{{ asset('bgShape.svg') }}" class="w-full h-full object-cover" alt="shape" />
     </div>
@@ -13,16 +13,10 @@
                 <h1 class="text-9xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
             </div>
         </div>
-        <div class="pointer-events-none absolute bottom-16 sm:bottom-10 right-2 sm:right-10 z-15 flex items-center justify-center">
-            <img class="w-50 h-50 sm:w-60 sm:h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
-        </div>
-
-        <button class="cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110">
-            Retriidile
-        </button>
+        <livewire:retriit-flower-button-modal />
     </div>
-    <div id="kuukava" class="relative scroll-mt-40 text-gray-700 mb-6">
-        <div class="relative mt-32 z-50">
+    <div id="kuukava" class="relative scroll-mt-50 text-gray-700 mb-6">
+        <div class="relative mt-32">
             <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-700 font-bold">Tulevad sündmused</h1>
         </div>
         <div
@@ -48,7 +42,7 @@
     </div>
     <div class="bg-rose-100">
         <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full relative z-10">
-            <div id="meist" class="scroll-mt-60 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+            <div id="meist" class="scroll-mt-60 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
                     <div class="w-full lg:w-1/2">
                         <h2 class="text-3xl font-bold mb-4">Meist</h2>
@@ -75,7 +69,7 @@
     </div>
     <div id="kajastused" class="relative z-10 bg-rose-100 scroll-mt-50">
         <div class="bg-rose-100 py-16">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
                     <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">
                         <div class="rounded-full overflow-hidden aspect-square max-h-[350px] border-4 border-lime-200">
@@ -142,7 +136,7 @@
     </div>
     <div id="opikojad" class="bg-rose-100 scroll-mt-20 relative z-10 ">
         <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
                     <div class="w-full lg:w-1/2">
                         <h2 class="text-3xl font-bold mb-6">Õpikojad</h2>
@@ -162,7 +156,7 @@
                             <span class="font-bold">PALVERÄNNAK</span> - Kristliku süvakultuuri radadel; nt on käidud Patmosel (Uue Testamendi Johannese Ilmutusraamatu sündimise koht), Iisraelis ja külastatud pühapaiku Eestis, Lätis, Leedus, Poolas.
                         </p>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">NAISTE JA MEESTE KÄSITÖÖ-TOAD</span> - Erinevatel teemadel, vt <a href="#kuukava" class="text-lime-600 hover:text-lime-700 font-bold">kuukava</a>.
+                            <span class="font-bold">NAISTE JA MEESTE KÄSITÖÖ-TOAD</span> - Erinevatel teemadel, vt <a href="#kuukava" class="text-emerald-600 hover:text-emerald-700 font-bold">kuukava</a>.
                         </p>
                     </div>
                     <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">
@@ -178,7 +172,7 @@
     </div>
     <div id="toetajad" class="bg-rose-100 scroll-mt-20 relative z-10 ">
         <div class="bg-rose-100 py-16">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
                     <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">
                         <div class="rounded-full overflow-hidden aspect-square max-h-[350px] border-4 border-lime-200">

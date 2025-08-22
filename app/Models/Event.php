@@ -13,6 +13,12 @@ class Event extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'paid' => 'boolean',
+        'start_date' => 'date',
+        'end_date' => 'date',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

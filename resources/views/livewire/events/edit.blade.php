@@ -37,16 +37,39 @@
                             </div>
 
                             <div class="mt-8 grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-8">
-                                <div class="sm:col-span-6">
-                                    <x-form-field>
-                                        <x-form-label for="description">Asukoht</x-form-label>
+                                <div class="sm:col-span-6 flex items-center space-x-4">
+                                    <div class="w-2/5">
+                                        <x-form-field>
+                                            <x-form-label for="location">Asukoht</x-form-label>
+                                            <div class="mt-2">
+                                                <x-form-input name="location" id="location" type="text" wire:model="form.location" />
+                                                <x-form-error name="form.location" />
+                                            </div>
+                                        </x-form-field>
+                                    </div>
 
-                                        <div class="mt-2">
-                                            <x-form-input name="location" id="location" type="textarea" wire:model="form.location" />
+                                    <div class="w-1/8 flex">
+                                        <label class="mt-8 ml-2 flex items-center space-x-2 cursor-pointer">
+                                            <input type="checkbox" name="paid" id="paid"
+                                                wire:model="form.paid"
+                                                class="h-4 w-4 cursor-pointer">
+                                            <x-form-label for="paid">Tasuline</x-form-label>
+                                        </label>
+                                    </div>
 
-                                            <x-form-error name="location" />
+                                    <div class="flex flex-col mt-8">
+                                        <div class="flex items-center space-x-2">
+                                            <x-form-input type="number" name="price" id="price"
+                                                step="any"
+                                                wire:model="form.price"
+                                                placeholder="30"
+                                                class="w-full max-w-[60px]" />
+                                            <x-form-label for="price">€</x-form-label>
                                         </div>
-                                    </x-form-field>
+                                        <div class="mt-1">
+                                            <x-form-error name="form.price" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -57,16 +80,17 @@
 
                                         <div class="mt-2 flex items-center space-x-2">
                                             <x-form-input id="start_date" name="start_date" type="date" required
-                                                class="w-full" wire:model="form.start_date" />
+                                                class="w-full" wire:model="form.dates.0.start_date" />
 
                                             <span>-</span>
 
-                                            <x-form-input name="end_date" id="end_date" type="date" class="w-full" wire:model="form.end_date" />
+                                            <x-form-input name="end_date" id="end_date" type="date" class="w-full" wire:model="form.dates.0.end_date" />
 
-                                            <x-form-error name="start_date" />
-                                            <x-form-error name="end_date" />
+
                                         </div>
                                     </x-form-field>
+                                    <x-form-error name="form.dates.0.start_date" />
+                                    <x-form-error name="form.dates.0.end_date" />
                                 </div>
                             </div>
 
@@ -81,11 +105,10 @@
                                             <span>-</span>
 
                                             <x-form-input name="end_time" id="end_time" type="time" wire:model="form.end_time" />
-
-                                            <x-form-error name="start_time" />
-                                            <x-form-error name="end_time" />
                                         </div>
                                     </x-form-field>
+                                    <x-form-error name="form.start_time" />
+                                    <x-form-error name="form.end_time" />
                                 </div>
                             </div>
 

@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->string('title');
             $table->string('location')->nullable();
             $table->text('description')->nullable();
+            $table->boolean('paid')->default(false);
+            $table->decimal('price', 8, 2)->nullable();
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->time('start_time');

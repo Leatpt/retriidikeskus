@@ -2,14 +2,16 @@
         <div class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">Sündmused</h1>
-                <x-form-button type="submit" wire:click="addEvent">Lisa Sündmus</x-form-button>
-                <x-form-button
-                    class="bg-red-600 text-white
-                         {{ empty($selectedEvents) ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'hover:bg-red-700' }}"
-                    wire:click="deleteSelected"
-                    wire:confirm="Kas kustutan kõik valitud üksused?">
-                    Kustuta valitud
-                </x-form-button>
+                <div>
+                    <x-form-button type="submit" wire:click="addEvent">Lisa Sündmus</x-form-button>
+                    <x-form-button
+                        class="bg-red-600 text-white
+                         {{ empty($selectedEvents) ? 'opacity-20 cursor-not-allowed pointer-events-none' : 'hover:bg-red-700' }}"
+                        wire:click="deleteSelected"
+                        wire:confirm="Kas kustutan kõik valitud üksused?">
+                        Kustuta valitud
+                    </x-form-button>
+                </div>
             </div>
         </div>
         @livewire('events.create')

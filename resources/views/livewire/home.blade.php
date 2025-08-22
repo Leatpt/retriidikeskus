@@ -15,7 +15,7 @@
         </div>
         <livewire:retriit-flower-button-modal />
     </div>
-    <div id="kuukava" class="relative scroll-mt-50 text-gray-700 mb-6">
+    <div id="kuukava" class="z-30 relative scroll-mt-50 text-gray-700 mb-6">
         <div class="relative mt-32">
             <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-700 font-bold">Tulevad sündmused</h1>
         </div>
@@ -215,7 +215,7 @@
             </div>
         </div>
     </div>
-    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted relative z-10 ">
+    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted relative z-30">
         <div class="scroll-mt-50 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
             <div class="flex flex-row items-stretch">
                 <div class="w-1/3 px-6 flex items-center justify-center lg:flex">

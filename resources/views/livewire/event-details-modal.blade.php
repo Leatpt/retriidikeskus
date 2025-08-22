@@ -1,11 +1,11 @@
 <div class="{{ $showModal ? 'block' : 'hidden' }}">
-    <div class="fixed z-50 inset-0">
+    <div class="fixed z-30 inset-0">
         <div class="flex justify-center items-center min-h-screen px-4">
-            <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
+            <div class="z-30 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
 
             @if ($event)
 
-            <div class="z-50 flex flex-col items-center justify-between w-1/2 min-h-[50vh] bg-white rounded-md">
+            <div class="z-40 flex flex-col items-center justify-between w-1/2 min-h-[50vh] bg-white rounded-md">
                 <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
                     <div class="w-40 flex-initial overflow-hidden mr-6">
                         <img

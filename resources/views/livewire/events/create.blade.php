@@ -56,25 +56,35 @@
                                     <x-form-field>
                                         <x-form-label for="choose_dates">Vali kuupäevad</x-form-label>
 
+                                        @foreach ($form->dates as $index => $date)
                                         <div class="mt-2 flex items-center space-x-2">
                                             <x-form-input
-                                                id="start_date"
-                                                name="start_date"
-                                                type="date" required
-                                                class="w-full"
-                                                wire:model="form.start_date" />
-                                            <span>-</span>
-
-                                            <x-form-input
-                                                name="end_date"
-                                                id="end_date"
                                                 type="date"
+                                                wire:model="form.dates.{{ $index }}.start_date"
                                                 class="w-full"
-                                                wire:model="form.end_date" />
+                                                required />
+                                            <span>-</span>
+                                            <x-form-input
+                                                type="date"
+                                                wire:model="form.dates.{{ $index }}.end_date"
+                                                class="w-full" />
+
+                                            <button type="button"
+                                                class="text-red-500"
+                                                wire:click="removeDate({{ $index }})">
+                                                Eemalda
+                                            </button>
                                         </div>
+                                        <x-form-error name="form.dates.{{ $index }}.start_date" />
+                                        <x-form-error name="form.dates.{{ $index }}.end_date" />
+                                        @endforeach
+
+                                        <button type="button"
+                                            class="mt-2 text-sm text-emerald-600"
+                                            wire:click="addDate">
+                                            + Lisa kuupäev
+                                        </button>
                                     </x-form-field>
-                                    <x-form-error name="form.start_date" />
-                                    <x-form-error name="form.end_date" />
                                 </div>
                             </div>
 

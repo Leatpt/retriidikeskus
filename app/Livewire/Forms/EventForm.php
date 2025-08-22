@@ -10,30 +10,31 @@ use Livewire\Form;
 class EventForm extends Form
 {
     public ?Event $event;
-
-    #[Validate('required|string|max:255')]
     public $title;
-
-    #[Validate('nullable|string|max:255')]
+    public $dates = [
+        ['start_date' => null, 'end_date' => null],
+    ];
+    public $start_time;
+    public $end_time;
+    public $category_id;
     public $location;
-
-    #[Validate('nullable|string')]
     public $description;
 
-    #[Validate('required|date')]
-    public $start_date;
 
-    #[Validate('nullable|date|after_or_equal:start_date')]
-    public $end_date;
-
-    #[Validate('required|date_format:H:i')]
-    public $start_time;
-
-    #[Validate('nullable|date_format:H:i')]
-    public $end_time;
-
-    #[Validate('required|exists:categories,id')]
-    public $category_id;
+    protected function rules(): array
+    {
+        return [
+            'title' => 'required|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
+            'dates' => 'array|min:1',
+            'dates.*.start_date' => 'required|date',
+            'dates.*.end_date' => 'nullable|date|after_or_equal:dates.*.start_date',
+            'start_time' => 'required|date_format:H:i',
+            'end_time' => 'nullable|date_format:H:i|after:start_time',
+            'category_id' => 'required|exists:categories,id',
+        ];
+    }
 
     public function setEvent(Event $event): void
     {
@@ -41,21 +42,22 @@ class EventForm extends Form
         $this->title = $event->title;
         $this->location = $event->location;
         $this->description = $event->description;
-        $this->start_date = $event->start_date;
-        $this->end_date = $event->end_date;
+        $this->dates = [
+            ['start_date' => $event->start_date, 'end_date' => $event->end_date],
+        ];
         $this->start_time = $event->start_time;
         $this->end_time = $event->end_time;
         $this->category_id = $event->category_id;
     }
 
-    public function store()
+    public function store(array $range)
     {
         Event::create([
             'title' => $this->title,
             'location' => $this->location,
             'description' => $this->description,
-            'start_date' => $this->start_date,
-            'end_date' => $this->end_date,
+            'start_date' => $range['start_date'],
+            'end_date' => $range['end_date'],
             'start_time' => $this->start_time,
             'end_time' => $this->end_time,
             'category_id' => $this->category_id,
@@ -68,18 +70,19 @@ class EventForm extends Form
     public function update()
     {
         $this->validate();
-        $this->event->update(
-            $this->only([
-                'title',
-                'location',
-                'description',
-                'start_date',
-                'end_date',
-                'start_time',
-                'end_time',
-                'category_id',
-            ]),
-        );
+
+        $range = $this->dates[0] ?? ['start_date' => null, 'end_date' => null];
+
+        $this->event->update([
+            'title' => $this->title,
+            'location' => $this->location,
+            'description' => $this->description,
+            'start_date' => $range['start_date'],
+            'end_date' => $range['end_date'],
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
+            'category_id' => $this->category_id,
+        ]);
         session()->flash('message', 'Sündmus edukalt uuendatud!');
     }
 
@@ -87,8 +90,8 @@ class EventForm extends Form
     {
         return [
             'title.required' => 'Pealkiri on kohustuslik.',
-            'start_date.required' => 'Alguskuupäev on kohustuslik.',
-            'end_date.after_or_equal' => 'Lõppkuupäev ei tohi olla enne alguskuupäeva.',
+            'dates.*.start_date.required' => 'Alguskuupäev on kohustuslik.',
+            'dates.*.end_date.after_or_equal' => 'Lõppkuupäev ei tohi olla enne alguskuupäeva.',
             'start_time.required' => 'Algusaeg on kohustuslik.',
             'end_time.after' => 'Lõppaeg peab olema hilisem kui algusaeg.',
             'category_id.required' => 'Palun vali kategooria.',

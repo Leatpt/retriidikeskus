@@ -82,4 +82,31 @@ class EventForm extends Form
         );
         session()->flash('message', 'Sündmus edukalt uuendatud!');
     }
+
+    protected function messages(): array
+    {
+        return [
+            'title.required' => 'Pealkiri on kohustuslik.',
+            'start_date.required' => 'Alguskuupäev on kohustuslik.',
+            'end_date.after_or_equal' => 'Lõppkuupäev ei tohi olla enne alguskuupäeva.',
+            'start_time.required' => 'Algusaeg on kohustuslik.',
+            'end_time.after' => 'Lõppaeg peab olema hilisem kui algusaeg.',
+            'category_id.required' => 'Palun vali kategooria.',
+            'category_id.exists' => 'Valitud kategooria ei ole kehtiv.',
+        ];
+    }
+
+    protected function validationAttributes(): array
+    {
+        return [
+            'title' => 'pealkiri',
+            'location' => 'asukoht',
+            'description' => 'kirjeldus',
+            'start_date' => 'alguskuupäev',
+            'end_date' => 'lõppkuupäev',
+            'start_time' => 'algusaeg',
+            'end_time' => 'lõppaeg',
+            'category_id' => 'kategooria',
+        ];
+    }
 }

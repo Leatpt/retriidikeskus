@@ -17,7 +17,7 @@
                                         <div class="mt-2">
                                             <x-form-input name="title" id="title" type="text" required wire:model="form.title" />
 
-                                            <x-form-error name="title" />
+                                            <x-form-error name="form.title" />
                                         </div>
                                     </x-form-field>
                                 </div>
@@ -29,9 +29,9 @@
                                         <x-form-label for="description">Ürituse Kirjeldus</x-form-label>
 
                                         <div class="mt-2">
-                                            <x-form-input name="description" id="description" type="textarea" wire:model="form.description" />
+                                            <x-form-input name="description" id="description" type="textarea" lines="4" wire:model="form.description" />
 
-                                            <x-form-error name="description" />
+                                            <x-form-error name="form.description" />
                                         </div>
                                     </x-form-field>
                                 </div>
@@ -45,7 +45,7 @@
                                         <div class="mt-2">
                                             <x-form-input name="location" id="location" type="textarea" wire:model="form.location" />
 
-                                            <x-form-error name="location" />
+                                            <x-form-error name="form.location" />
                                         </div>
                                     </x-form-field>
                                 </div>
@@ -57,17 +57,24 @@
                                         <x-form-label for="choose_dates">Vali kuupäevad</x-form-label>
 
                                         <div class="mt-2 flex items-center space-x-2">
-                                            <x-form-input id="start_date" name="start_date" type="date" required
-                                                class="w-full" wire:model="form.start_date" />
-
+                                            <x-form-input
+                                                id="start_date"
+                                                name="start_date"
+                                                type="date" required
+                                                class="w-full"
+                                                wire:model="form.start_date" />
                                             <span>-</span>
 
-                                            <x-form-input name="end_date" id="end_date" type="date" class="w-full" wire:model="form.end_date" />
-
-                                            <x-form-error name="start_date" />
-                                            <x-form-error name="end_date" />
+                                            <x-form-input
+                                                name="end_date"
+                                                id="end_date"
+                                                type="date"
+                                                class="w-full"
+                                                wire:model="form.end_date" />
                                         </div>
                                     </x-form-field>
+                                    <x-form-error name="form.start_date" />
+                                    <x-form-error name="form.end_date" />
                                 </div>
                             </div>
 
@@ -83,10 +90,10 @@
 
                                             <x-form-input name="end_time" id="end_time" type="time" wire:model="form.end_time" />
 
-                                            <x-form-error name="start_time" />
-                                            <x-form-error name="end_time" />
                                         </div>
                                     </x-form-field>
+                                    <x-form-error name="form.start_time" />
+                                    <x-form-error name="form.end_time" />
                                 </div>
                             </div>
 
@@ -99,14 +106,14 @@
                                             <select name="category_id" id="category_id"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                                 required wire:model="form.category_id">
-                                                <option selected>Vali Kategooria</option>
+                                                <option selected>- Vali Kategooria -</option>
                                                 @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                 @endforeach
 
                                             </select>
 
-                                            <x-form-error name="category_id" />
+                                            <x-form-error name="form.category_id" />
                                         </div>
                                     </x-form-field>
                                 </div>

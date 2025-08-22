@@ -28,6 +28,7 @@ class Create extends Component
 
     public function save()
     {
+        $this->form->validate();
         $this->form->store();
         $this->redirect('/events', navigate: true);
     }

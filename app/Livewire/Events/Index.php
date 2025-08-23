@@ -43,7 +43,6 @@ class Index extends Component
         }
     }
 
-
     public function updatedSelectedEvents()
     {
         $eventsOnPage = Event::paginate(20, pageName: 'events-page')->pluck('id')->toArray();

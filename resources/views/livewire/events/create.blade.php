@@ -29,7 +29,7 @@
                                         <x-form-label for="description">Ürituse Kirjeldus</x-form-label>
 
                                         <div class="mt-2">
-                                            <x-form-input name="description" id="description" type="textarea" lines="4" wire:model="form.description" />
+                                            <x-form-input name="description" id="description" type="textarea" rows="6" wire:model="form.description" />
 
                                             <x-form-error name="form.description" />
                                         </div>
@@ -39,14 +39,18 @@
 
                             <div class="mt-8 grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-8">
                                 <div class="sm:col-span-6 flex items-center space-x-4">
-                                    <div class="w-2/5">
-                                        <x-form-field>
-                                            <x-form-label for="location">Asukoht</x-form-label>
-                                            <div class="mt-2">
-                                                <x-form-input name="location" id="location" type="text" wire:model="form.location" />
-                                                <x-form-error name="form.location" />
-                                            </div>
-                                        </x-form-field>
+                                    <div class="w-1/5">
+                                        <x-form-label for="location">Asukoht</x-form-label>
+                                        <div class="mt-2">
+                                            <select name="location" id="location"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                                                required wire:model="form.location">
+                                                <option disabled selected>- Vali Asukoht -</option>
+                                                <option value="oruMois">Oru Mõis</option>
+                                                <option value="tuhalaKirik">Tuhala Kirik</option>
+                                            </select>
+                                            <x-form-error name="form.location" />
+                                        </div>
                                     </div>
 
                                     <div class="w-1/8 flex">
@@ -59,12 +63,25 @@
                                     </div>
 
                                     <div class="flex flex-col mt-8">
-                                        <div class="flex items-center space-x-2">
-                                            <x-form-input type="number" name="price" id="price"
+                                        <div class="flex items-center space-x-2"
+                                            x-data="{
+                                                    paid: @entangle('form.paid'),
+                                                    price: @entangle('form.price'),
+                                                }"
+                                            x-init="
+                                                    $watch('paid', value => {
+                                                        if (!value) price = '';
+                                                    })
+                                                ">
+                                            <input
+                                                type="number"
+                                                name="price"
+                                                id="price"
                                                 step="any"
-                                                wire:model="form.price"
-                                                placeholder="30"
-                                                class="w-full max-w-[60px]" />
+                                                x-model="price"
+                                                placeholder="00"
+                                                :class="paid ? 'w-full max-w-[60px] justify-end' : 'w-full max-w-[60px] opacity-50 cursor-not-allowed justify-end'"
+                                                :disabled="!paid" />
                                             <x-form-label for="price">€</x-form-label>
                                         </div>
                                         <div class="mt-1">

@@ -37,15 +37,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex w-4/6 space-x-0">
-                                <div class="flex w-1/6 flex-col items-center justify-center">
-                                    <x-coolicon-map-pin class="h-5 w-5 mb-2 " />
-                                    <x-bi-journal-bookmark-fill class="h-5 w-5" />
-                                </div>
-                                <div class="flex w-5/6 flex-col items-start justify-start content-start">
-                                    <div class="font-semibold">{{ $event->location }}
+                            <div class="flex flex-col w-4/6 space-x-0">
+                                <a href="{{ $event->location_link }}" target="_blank" class="hover:text-emerald-800 hover:underline">
+                                    <div class="flex w-full h-1/2 flex-row items-start justify-start spaxe-x-2">
+                                        <x-coolicon-map-pin class="h-5 w-5 mr-2 mt-[2px]" />
+                                        <div class="font-semibold mb-2">{{ $event->location_label }}
+                                        </div>
                                     </div>
-                                    <div class="mt-1">{{ $event->category->name }}
+                                </a>
+                                <div class="flex w-full h-1/2 flex-row items-start justify-start spaxe-x-2">
+                                    <x-bi-journal-bookmark-fill class="h-5 w-5 mr-2" />
+                                    <div class="">{{ $event->category->name }}
                                     </div>
                                 </div>
                             </div>

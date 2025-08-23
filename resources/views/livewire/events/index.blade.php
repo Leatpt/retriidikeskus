@@ -58,7 +58,7 @@
 
                         <!-- Location -->
                         <td class="px-4 py-2 border-b border-gray-300">
-                            {{ $event->location }}
+                            {{ $event->location_label }}
                         </td>
 
                         <!-- Start Date -->

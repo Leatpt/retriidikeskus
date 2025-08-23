@@ -54,14 +54,24 @@
 
                     </div>
                 </div>
-                <div class="w-full mb-4 px-6">
+                <div class="w-full mb-4 px-6 flex flex-col">
+                    @if ($event->paid === true)
+                    <p class="text-sm font-bold text-emerald-700 mb-2">Retriidi osalustasu on {{ $event->price }}€. <span class="text-sm font-semibold text-gray-700 mb-2">Sisaldab ööbimist ja söögikordi.</span></p>
                     <p class="text-sm text-gray-700">{{ $event->description }}</p>
+                    @else
+                    <p class="text-sm text-gray-700">{{ $event->description }}</p>
+                    @endif
                 </div>
 
                 <div class="w-full flex justify-end gap-4 p-6 bg-rose-100">
+                    @if ($event->category->name === 'Retriit')
                     <button class="px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 cursor-pointer">Registreeri</button>
                     <button class="px-4 py-2 bg-whitetext-gray-700 rounded-md hover:bg-gray-100 cursor-pointer"
                         wire:click="$set('showModal', false)">Sulge</button>
+                    @else
+                    <button class="px-4 py-2 bg-whitetext-gray-700 rounded-md hover:bg-gray-100 cursor-pointer"
+                        wire:click="$set('showModal', false)">Sulge</button>
+                    @endif
                 </div>
             </div>
 

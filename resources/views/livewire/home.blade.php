@@ -204,11 +204,7 @@
                         <p class="text-lg leading-relaxed text-justify">
                             Oru mõisahoone-kogudusemaja köögi renoveerimine
                         </p>
-                        <div class="inline-flex flex-row align-right mt-6 uppercase bg-emerald-600 text-white font-bold rounded-full px-4 py-2 hover:bg-emerald-700 cursor-pointer drop-shadow-[5px_5px_0px_rgba(0,85,59,1)] hover:drop-shadow-[7px_7px_0px_rgba(0,92,64,1)] transition duration-300">
-                            <x-coolicon-heart-01 class="w-8 h-8 mr-2 cursor-pointer" />
-                            <button class="uppercase cursor-pointer">Toeta Oru Rahvaõpistu Tegemisi</button>
-                        </div>
-
+                        <livewire:donation-modal />
                     </div>
 
                 </div>

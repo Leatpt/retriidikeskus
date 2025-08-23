@@ -31,7 +31,7 @@
                 </div>
                 <div class="wheel-right relative w-96 h-96">
                     <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10">
-                        <div class="overflow-auto w-full h-full flex items-center justify-center p-4 w-5/6 h-5/6 rounded-full">
+                        <div class="overflow-auto w-full h-full flex items-center justify-center p-6 w-5/6 h-5/6 rounded-full">
                             <livewire:event-details />
                         </div>
                     </div>

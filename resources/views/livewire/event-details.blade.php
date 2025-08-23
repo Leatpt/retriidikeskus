@@ -1,4 +1,4 @@
-    <div class="w-full h-full rounded-full overflow-hidden flex flex-col border-2 border-lime-200 border-dotted">
+    <div class="w-full h-full rounded-full overflow-hidden flex flex-col border-2 border-rose-200 border-dotted">
         <div class="w-full h-1/2 overflow-hidden">
             <img
                 src="{{ asset('eventImage1.svg') }}"
@@ -18,7 +18,7 @@
                     </h3>
                     <p class="mt-2 mb-2 text-sm text-gray-600 px-2">{{ \Str::limit($event->description, 120) }}</p>
                     <button
-                        class="cursor-pointer border-2 border-lime-300 hover:border-lime-400 rounded-3xl px-3 text-lime-500 hover:text-lime-600 transform hover:scale-110"
+                        class="cursor-pointer border-1 border-rose-500 hover:border-rose-700 rounded-3xl px-3 font-semibold text-rose-500 hover:text-rose-700 transform hover:scale-110"
                         wire:click="openEventDetails({{ $event->id }})">Loe Edasi</button>
                 </div>
                 @endforeach

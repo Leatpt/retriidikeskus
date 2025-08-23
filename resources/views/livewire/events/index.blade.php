@@ -1,7 +1,12 @@
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <div class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">Sündmused</h1>
+                <div class="flex-1 flex flex-row gap-4">
+                    <a href="/categories">
+                        <h2 class="text-lg font-bold tracking-tight text-gray-300 mt-2 hover:text-gray-700">Kategooriad</h2>
+                    </a>
+                    <h1 class="text-3xl font-bold tracking-tight text-gray-900">Sündmused</h1>
+                </div>
                 <div>
                     <x-form-button type="submit" wire:click="addEvent">Lisa Sündmus</x-form-button>
                     <x-form-button

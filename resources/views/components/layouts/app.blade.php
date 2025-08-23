@@ -39,7 +39,7 @@
                                 @endguest
                                 @auth
                                 <x-nav-link href="/" :active="request()->is('/')">Avaleht</x-nav-link>
-                                <x-nav-link href="/events" :active="request()->is('events')">Sündmused</x-nav-link>
+                                <x-nav-link href="/events" :active="request()->is('events')">Admin</x-nav-link>
                                 @endauth
                             </div>
                         </div>

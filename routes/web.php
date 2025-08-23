@@ -2,16 +2,16 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\SessionController;
-use App\Livewire\Events\Index;
+use App\Livewire\Events\Index as EventsIndex;
 use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Categories\Index as CategoriesIndex;
 
 
 Route::get('/', Home::class);
 
-Route::get('/events', Index::class)->middleware('auth');
-
-
+Route::get('/events', EventsIndex::class)->middleware('auth');
+Route::get('/categories', CategoriesIndex::class)->middleware('auth');
 
 
 // Route::get('/events', [EventController::class, 'index'])->middleware('auth');

@@ -8,7 +8,7 @@
             <div class="flex justify-center items-center min-h-screen px-4">
                 <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
 
-                <div class="z-50 flex flex-col w-7/8 sm:w-1/2 min-h-[50vh] bg-white rounded-md">
+                <div class="z-50 flex flex-col w-7/8 sm:max-w-[650px] min-h-[50vh] bg-white rounded-md">
                     <form class="flex flex-col w-full h-full" wire:submit.prevent="sendEmail">
                         @csrf
                         <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">

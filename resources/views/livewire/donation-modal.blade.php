@@ -10,7 +10,7 @@
             <div class="flex justify-center items-center min-h-screen px-4">
                 <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
 
-                <div class="z-50 flex flex-col items-center w-7/8 sm:w-1/2 min-h-[350px] bg-white rounded-md">
+                <div class="z-50 flex flex-col items-center w-7/8 sm:max-w-[450px] min-h-[350px] bg-white rounded-md">
                     <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
                         <div class="flex flex-col w-full ml-4">
                             <div class="flex items-start justify-between w-full">
@@ -19,8 +19,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full flex flex-row text-center mb-4 px-6">
-                        <div class="bg-white rounded-xl p-6 text-gray-800">
+                    <div class="w-full flex justify-center flex-col items-center text-center mb-4 px-6">
+                        <div class="bg-white rounded-xl p-6 text-gray-800 flex justify-center flex-col items-center">
                             <h2 class="text-2xl font-bold text-emerald-700 mb-4">Annetuse pangaandmed</h2>
 
                             <p class="mb-2"><span class="font-semibold">Saaja nimi:</span> Eesti Evangeelse Luterliku Kiriku Tuhala Kaarli kogudus</p>

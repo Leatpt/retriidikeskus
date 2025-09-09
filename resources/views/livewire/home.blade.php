@@ -221,9 +221,11 @@
                     <livewire:phone-number-modal />
                 </div>
                 <div class="w-1/3 px-6 flex items-center justify-center lg:flex">
-                    <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="leia meid">
-                        <a href="https://www.google.com/maps/place/Oru+m%C3%B5is/@59.1898759,24.9831921,17z/data=!3m1!4b1!4m6!3m5!1s0x4692db7d85d3b6b5:0xa06618dd62804917!8m2!3d59.1898759!4d24.985767!16s%2Fg%2F11bywvxk7z?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank"><x-ionicon-location class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>
+                    <div>
+                        <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="leia meid">
+                            <a href="https://www.google.com/maps/place/Oru+m%C3%B5is/@59.1898759,24.9831921,17z/data=!3m1!4b1!4m6!3m5!1s0x4692db7d85d3b6b5:0xa06618dd62804917!8m2!3d59.1898759!4d24.985767!16s%2Fg%2F11bywvxk7z?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"><x-ionicon-location class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>
+                        </div>
                     </div>
                 </div>
             </div>

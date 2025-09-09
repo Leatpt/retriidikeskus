@@ -2,7 +2,7 @@
     <div class="pointer-events-none absolute top-200 left-0 w-full h-[1300px] z-0">
         <img src="{{ asset('bgShape.svg') }}" class="w-full h-full object-cover" alt="shape" />
     </div>
-    <div id="top" class="relative z-10">
+    <div id="top" class="relative">
         <div class="min-h-screen relative bg-lime-50 text-white rounded-br-full overflow-hidden">
             <img
                 src="{{ asset('oruMainPicture.jpg') }}"
@@ -15,7 +15,7 @@
         </div>
         <livewire:retriit-flower-button-modal />
     </div>
-    <div id="kuukava" class="z-30 relative scroll-mt-50 text-gray-700 mb-6">
+    <div id="kuukava" class="relative scroll-mt-50 text-gray-700 mb-6">
         <div class="relative mt-32">
             <h1 class="flex items-center justify-center mb-8 text-3xl text-gray-700 font-bold">Tulevad sündmused</h1>
         </div>
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="bg-rose-100">
-        <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full relative z-10">
+        <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full relative">
             <div id="meist" class="scroll-mt-60 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
                     <div class="w-full lg:w-1/2">
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div id="kajastused" class="relative z-10 bg-rose-100 scroll-mt-50">
+    <div id="kajastused" class="relative bg-rose-100 scroll-mt-50">
         <div class="bg-rose-100 py-16">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
@@ -134,7 +134,7 @@
             </div>
         </div>
     </div>
-    <div id="opikojad" class="bg-rose-100 scroll-mt-20 relative z-10 ">
+    <div id="opikojad" class="bg-rose-100 scroll-mt-20 relative">
         <div class="bg-lime-100 py-16 rounded-tr-full rounded-br-full">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
@@ -170,7 +170,7 @@
             </div>
         </div>
     </div>
-    <div id="toetajad" class="bg-rose-100 scroll-mt-20 relative z-10 ">
+    <div id="toetajad" class="bg-rose-100 scroll-mt-20 relative">
         <div class="bg-rose-100 py-16">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8 text-gray-800">
                 <div class="flex flex-row items-stretch">
@@ -211,7 +211,7 @@
             </div>
         </div>
     </div>
-    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted relative z-30">
+    <div id="kontakt" class="bg-lime-100 py-14 bottom-0 w-full border-t-2 border-gray-700 border-dotted relative">
         <div class="scroll-mt-50 container mx-auto px-4 sm:px-6 lg:px-8 sm:pr-8">
             <div class="flex flex-row items-stretch">
                 <div class="w-1/3 px-6 flex items-center justify-center lg:flex">

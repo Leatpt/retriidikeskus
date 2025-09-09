@@ -1,5 +1,5 @@
 <div class="relative bg-rose-100 overflow-visible overflow-x-hidden">
-    <div class="pointer-events-none absolute top-200 left-0 w-full h-[1300px] z-0">
+    <div class="pointer-events-none absolute top-200 left-0 w-full h-[1700px] z-0">
         <img src="{{ asset('bgShape.svg') }}" class="w-full h-full object-cover" alt="shape" />
     </div>
     <div id="top" class="relative">
@@ -23,14 +23,14 @@
             class="flex flex-row items-center justify-center gap-6 w-full mb-12">
             <div class="flex flex-col md:flex-row items-center justify-center gap-6 w-full mb-12">
                 <div class="wheel-left relative w-96 h-96">
-                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10 ">
+                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10 shadow-[35px_35px_0_rgba(0,0,0,0)] shadow-rose-400">
                         <div class="overflow-auto w-full h-full flex items-center justify-center p-4">
                             <livewire:calendar />
                         </div>
                     </div>
                 </div>
-                <div class="wheel-right relative w-96 h-96">
-                    <div class="relative flex items-center justify-center rounded-full bg-white w-96 h-96 z-10">
+                <div class="wheel-right relative w-120 h-120">
+                    <div class="relative flex items-center justify-center rounded-full bg-white w-120 h-120 z-10 shadow-[15px_-15px_0_rgba(0,0,0,0)] shadow-purple-400">
                         <div class="overflow-auto w-full h-full flex items-center justify-center p-6 w-5/6 h-5/6 rounded-full">
                             <livewire:event-details />
                         </div>

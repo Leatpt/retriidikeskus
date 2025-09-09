@@ -79,7 +79,7 @@
 
 
             @else
-            <p>No event details available.</p>
+            <p>Ei ole tulevaid sündmusi.</p>
             @endif
 
         </div>

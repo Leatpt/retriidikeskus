@@ -1,10 +1,10 @@
 <div>
     <div>
-        <div class="w-60 h-60 pointer-events-none absolute bottom-16 sm:bottom-10 right-2 sm:right-10 z-15 flex items-center justify-center">
+        <div class="w-60 h-60 pointer-events-none absolute bottom-6 sm:bottom-10 -right-4 sm:right-10 z-15 flex items-center justify-center">
             <img class="w-50 h-50 sm:w-60 sm:h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
         </div>
 
-        <button class="cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-24 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110"
+        <button class="cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-20 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110"
             wire:click="showRetriitFlowerButtonModal">
             Retriidile
         </button>

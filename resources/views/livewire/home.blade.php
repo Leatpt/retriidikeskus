@@ -10,7 +10,7 @@
                 class="absolute inset-0 w-full h-full object-cover z-0">
             <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]"></div>
             <div class="relative z-10 flex flex-col start-left justify-center h-screen px-4 sm:px-6 lg:px-8">
-                <h1 class="text-9xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
+                <h1 class="text-3xl md:text-5xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
             </div>
         </div>
         <livewire:retriit-flower-button-modal />

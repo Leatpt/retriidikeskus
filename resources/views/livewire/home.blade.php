@@ -143,22 +143,26 @@
                     <div class="w-full lg:w-1/2">
                         <h2 class="text-3xl font-bold mb-6">Õpikojad</h2>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">KASVU-ÕPIKODA</span> - Seminar-õpikoda kasvuhuvis inimesele.
+                            <span class="font-bold">PIIBLI ÕPIKODA</span> - Loeng-praktikumid Piibli lugude tutvustamiseks – Piibel on raamat inimesest ja
+                            tema arenguloost; täiskasvanuks saadakse Uues Testamendis väljendatud evangeeliumite juhiste kaudu
+                            Jeesuse sõnades.
                         </p>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">VAIKUSE RÄNNAK</span> - Retriitide sissejuhatusena kas õues (7,5 km) või siseruumides (nö “sisemaailmas”).
+                            <span class="font-bold">VAIKUSE ÕPIKODA ehk RETRIIT</span> - Vaikuse õpikoda meelerahu taastamiseks. Tavaliselt nädalalõpus
+                            (reede õhtust 19:00 kuni pühapäeva pealelõunani15:00). Sõlmitakse kas osaline või täielik vaikuse
+                            kokkulepe; loobutakse nutivahenditest jm müra tekitavatest masinatest; osaletakse päevakava alusel
+                            erinevates toimingutes (harjutustes), mis lõpptulemusena väljendub meelerahuna.
                         </p>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">RETRIIT</span> - Vaikuse õpikoda meelerahu taastamiseks. Tavaliselt nädalalõpus (reede õhtust 19:00 kuni pühapäeva pealelõunani15:00). Sõlmitakse kas osaline või täielik vaikuse kokkulepe; loobutakse nutivahenditest jm müra tekitavatest masinatest; osaletakse päevakava alusel erinevates toimingutes (harjutustes), mis lõpptulemusena väljendub meelerahuna. VAJALIK: kaasa võtta ööbimis- ja hügieenitarbed, lebomatt ja tekk (virgutused ja lõdvestused), töö- ja rännaku riided ning jalatsid, märkmevihk.
+                            <span class="font-bold">VAIKUSE RÄNNAK</span> - Retriitide sissejuhatusena kas õues (7,5 km) või siseruumides (nö
+                            “sisemaailmas”).
                         </p>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">TÖÖHARJUTUS</span> - Erinevad tööd-tegemised mõisas, ja selle ümber; aitab ärgata ja märgata (peamiselt retriitide ühe osana).
+                            <span class="font-bold">PALVERÄNNAK</span> - Kristliku süvakultuuri radadel; nt on käidud Patmosel (Uue Testamendi Johannese Ilmutusraamatu sündimise koht),
+                            Iisraelis ja külastatud pühapaiku Eestis, Lätis, Leedus, Poolas. Palverännak on üks retriidi vorme.
                         </p>
                         <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">PALVERÄNNAK</span> - Kristliku süvakultuuri radadel; nt on käidud Patmosel (Uue Testamendi Johannese Ilmutusraamatu sündimise koht), Iisraelis ja külastatud pühapaiku Eestis, Lätis, Leedus, Poolas.
-                        </p>
-                        <p class="text-lg leading-relaxed text-justify mb-2">
-                            <span class="font-bold">NAISTE JA MEESTE KÄSITÖÖ-TOAD</span> - Erinevatel teemadel, vt <a href="#kuukava" class="text-emerald-600 hover:text-emerald-700 font-bold">kuukava</a>.
+                            <span class="font-bold">KASVU-ÕPIKODA</span> - Loeng-praktikumid kasvatusega tegelevale inimesele.
                         </p>
                     </div>
                     <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">

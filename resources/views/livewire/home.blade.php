@@ -11,7 +11,17 @@
             <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]">
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl md:text-6xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="">õigupoolest üht!</span></h1>
+                <img src="{{ asset('brushStroke.svg') }}"
+                    alt="brushstroke"
+                    class="absolute min-w-[1500px] object-cover z-0 opacity-60" />
+                <h1 class="text-4xl max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] md:text-6xl text-white font-bold text-shadow-lg/70 z-20">Tarvis on vähe, <span class="">õigupoolest üht!</span></h1>
+                <p class="text-xl max-w-[500px] md:text-2xl md:max-w-[700px] lg:max-w-[900px] uppercase mt-4 z-20 text-shadow-lg/70">Oru Rahvaõpistu on koht, kus kristlik süvatraditsioon kohtub tänapäeva inimesega — retriidid, õpikojad ja vaimne kasv rahus ja vaikuses.</p>
+                <a href="#kuukava" class="hidden md:block z-20">
+                    <div class="flex flex-col items-center justify-center mt-8 max-w-[900px] text-lime-300 hover:text-lime-500 transition cursor-pointer">
+                        <p class="text-2xl font-semibold text-shadow-lg/70">Vaata kuukava ja tule julgelt!</p>
+                        <x-ionicon-arrow-down-circle class="w-12 h-12 mt-2" />
+                    </div>
+                </a>
             </div>
 
         </div>

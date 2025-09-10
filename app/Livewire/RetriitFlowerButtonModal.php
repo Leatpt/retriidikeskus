@@ -9,6 +9,7 @@ use Carbon\Carbon;
 class RetriitFlowerButtonModal extends Component
 {
     public $showModal = false;
+    public $showRegisterModal = false;
     public $nextBigEvent;
     public $event;
 

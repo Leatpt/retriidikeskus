@@ -5,7 +5,6 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Log;
 
 
 class SendEmailModal extends Component
@@ -17,7 +16,7 @@ class SendEmailModal extends Component
     public $customerMessage;
 
     protected $rules = [
-        'customerName'   => 'required|string|max:255',
+        'customerName'   => 'required|string|min:3|max:255',
         'customerEmail'  => 'required|email',
         'customerMessage' => 'required|string|max:2000',
     ];
@@ -25,6 +24,8 @@ class SendEmailModal extends Component
     protected $messages = [
         'customerName.required'    => 'Nimi on kohustuslik!',
         'customerName.string'      => 'Nimi peab olema tekst.',
+        'customerName.min'         => 'Nimi peab olema vähemalt 3 tähemärki.',
+        'customerName.max'         => 'Nimi ei tohi ületada 255 märki.',
         'customerEmail.required'   => 'E-posti aadress on kohustuslik!',
         'customerEmail.email'      => 'Palun sisesta korrektne e-posti aadress.',
         'customerMessage.required' => 'Sõnumi väli on kohustuslik!',
@@ -50,21 +51,10 @@ class SendEmailModal extends Component
 
     public function sendEmail()
     {
-        $this->validate();
+        $validatedData = $this->validate();
 
         try {
-            /*
-            Mail::raw($this->customerMessage, function ($message) {
-                $message->to('test@example.com')
-                    ->from($this->customerEmail, $this->customerName)
-                    ->subject('Retriidikeskus: Uus kiri');
-            });
-        */
-            Log::info('Contact form submitted', [
-                'name' => $this->customerName,
-                'email' => $this->customerEmail,
-                'message' => $this->customerMessage,
-            ]);
+            Mail::to('redealey@gmail.com')->send(new \App\Mail\ContactUsMail($validatedData));
 
             $this->reset(['customerName', 'customerEmail', 'customerMessage']);
             session()->flash('success', 'Sõnum saadetud! 🎉');

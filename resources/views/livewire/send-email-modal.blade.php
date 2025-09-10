@@ -52,7 +52,7 @@
                             </div>
                             <div class="h-1/3 w-full px-4 mt-2">
                                 <label for="customerEmail" class="block mb-2 text-sm font-medium text-gray-900">E-mail</label>
-                                <input type="email"
+                                <input type="text"
                                     id="customerEmail"
                                     class="block p-2.5 w-full text-sm text-gray-900 bg-lime-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                     placeholder="kasutaja@example.com"

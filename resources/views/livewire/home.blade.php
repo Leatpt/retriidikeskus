@@ -255,6 +255,7 @@
             </div>
         </div>
     </div>
+    <livewire:register-form />
     <div x-data="{ show: false }"
         x-on:scroll.window="show = window.pageYOffset > 200">
         <a

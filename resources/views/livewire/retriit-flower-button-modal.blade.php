@@ -4,7 +4,7 @@
             <img class="w-50 h-50 sm:w-60 sm:h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
         </div>
 
-        <button class="cursor-pointer bg-lime-200 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-20 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110"
+        <button class="cursor-pointer bg-lime-300 border-solid border-4 border-gray-800 rounded-full w-32 h-32 absolute bottom-20 right-12 sm:right-24 z-20 flex flex-col items-center justify-center text-gray-800 hover:bg-rose-400 transition duration-300 text-xl font-bold transform hover:scale-110"
             wire:click="showRetriitFlowerButtonModal">
             Retriidile
         </button>
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="w-full flex justify-end gap-4 p-6 bg-rose-100">
-                            <button class="px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 cursor-pointer" wire:click="$set('showRegisterModal', true)">Registreeri</button>
+                            <button class="px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 cursor-pointer" wire:click="openRegisterModal">Registreeri</button>
                             <button class="px-4 py-2 bg-whitetext-gray-700 rounded-md hover:bg-gray-100 cursor-pointer"
                                 wire:click="$set('showModal', false)">Sulge</button>
                         </div>

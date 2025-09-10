@@ -32,6 +32,14 @@ class RetriitFlowerButtonModal extends Component
             ->first();
     }
 
+    public function openRegisterModal()
+    {
+        if ($this->nextBigEvent) {
+            $this->dispatch('openRegisterModal', $this->nextBigEvent->toArray());
+        }
+    }
+
+
     public function render()
     {
         return view('livewire.retriit-flower-button-modal');

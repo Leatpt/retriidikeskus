@@ -8,10 +8,12 @@
                 src="{{ asset('oruMainPicture.jpg') }}"
                 alt="welcomeImage"
                 class="absolute inset-0 w-full h-full object-cover z-0">
-            <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]"></div>
-            <div class="relative z-10 flex flex-col start-left justify-center h-screen px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl md:text-5xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="block 2xl:ml-[25%]">õigupoolest üht!</span></h1>
+            <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]">
             </div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl md:text-6xl text-white font-bold text-shadow-lg/70">Tarvis on vähe, <span class="">õigupoolest üht!</span></h1>
+            </div>
+
         </div>
         <livewire:retriit-flower-button-modal />
     </div>
@@ -201,8 +203,16 @@
                             <span class="text-rose-400 font-bold">Raadio 7</span>
                         </p>
                         <h3 class="text-xl mb-2 font-bold mt-4">Praegu käsil:</h3>
+                        <a href="https://www.facebook.com/oru.rahvaopistu/posts/pfbid06no3ryB62X4WFnMosJ8YUj8idpRi3E5XZpZbTwaK43kEvkQEpvMgU6rGMAxLeppCl" target="_blank">
+                            <div class="flex flex-row items-center text-blue-500 hover:text-blue-700 cursor-pointer">
+                                <x-ionicon-logo-facebook class="w-5 h-5" />
+                                <p class="text-lg leading-relaxed text-justify ml-1 underline">
+                                    Oru mõisahoone-kogudusemaja köögi renoveerimine
+                                </p>
+                            </div>
+                        </a>
                         <p class="text-lg leading-relaxed text-justify">
-                            Oru mõisahoone-kogudusemaja köögi renoveerimine
+                            LEADER projektitoetus 2023-2027, 3 Kogukondade võimekuse suurendamine
                         </p>
                         <livewire:donation-modal />
                     </div>

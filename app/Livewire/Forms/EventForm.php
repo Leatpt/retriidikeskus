@@ -29,7 +29,7 @@ class EventForm extends Form
     {
         return [
             'title' => 'required|string|max:255',
-            'location' => 'nullable|string|max:255',
+            'location' => 'required|string|in:oruMois,tuhalaKirik',
             'description' => 'nullable|string',
             'paid' => 'required|boolean',
             'price' => 'required_if:paid,true|nullable|numeric|min:0',

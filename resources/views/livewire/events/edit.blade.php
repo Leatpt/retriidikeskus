@@ -44,7 +44,7 @@
                                             <select name="location" id="location"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
                                                 required wire:model="form.location">
-                                                <option disabled selected>- Vali Asukoht -</option>
+                                                <option disabled>- Vali Asukoht -</option>
                                                 <option value="oruMois">Oru Mõis</option>
                                                 <option value="tuhalaKirik">Tuhala Kirik</option>
                                             </select>

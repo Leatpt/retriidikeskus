@@ -14,9 +14,9 @@
             <div class="fixed z-50 inset-0">
                 <div class="flex justify-center items-center min-h-screen px-4">
                     <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
-                    <div class="z-50 flex flex-col items-center justify-between w-1/2 max-h-[50vh] bg-white rounded-md">
+                    <div class="z-50 flex flex-col items-center justify-between w-full lg:w-1/2 max-h-[80vh] bg-white rounded-md">
                         <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
-                            <div class="w-40 flex-initial overflow-hidden mr-6">
+                            <div class="hidden md:block w-40 flex-initial overflow-hidden mr-6">
                                 <img
                                     src="{{ asset('eventBird.svg') }}"
                                     alt="Event Image"
@@ -27,19 +27,19 @@
                                     <h3 class="text-3xl font-semibold mb-2">{{ $nextBigEvent->title }}</h3>
                                     <div class="flex justify-end cursor-pointer" wire:click="$set('showModal', false)"><x-bi-x class="h-6 w-6 hover:text-gray-500" /></div>
                                 </div>
-                                <div class="flex gap-x-8 w-full text-emerald-600 text-center">
+                                <div class="flex gap-x-24 md:gap-x-8 w-full text-emerald-600 text-center">
                                     <div class="flex w-2/6 items-center justify-start">
                                         <div class="flex flex-col items-center justify-start mr-2">
                                             <x-coolicon-calendar-days class="h-5 w-5 mb-2" />
                                             <x-coolicon-clock class="h-5 w-5" />
                                         </div>
                                         <div class="flex flex-col items-start text-left justify-center">
-                                            <div class="font-semibold">{{ \Carbon\Carbon::parse($nextBigEvent->start_date)->format('d.m') }}
+                                            <div class="font-semibold whitespace-nowrap">{{ \Carbon\Carbon::parse($nextBigEvent->start_date)->format('d.m') }}
                                                 @if ($nextBigEvent->start_date != $nextBigEvent->end_date)
                                                 - {{ \Carbon\Carbon::parse($nextBigEvent->end_date)->format('d.m') }}
                                                 @endif
                                             </div>
-                                            <div class="mt-1">{{ \Carbon\Carbon::parse($nextBigEvent->start_time)->format('H:i') }}
+                                            <div class="mt-1 whitespace-nowrap">{{ \Carbon\Carbon::parse($nextBigEvent->start_time)->format('H:i') }}
                                                 @if ($nextBigEvent->start_time != $nextBigEvent->end_time)
                                                 - {{ \Carbon\Carbon::parse($nextBigEvent->end_time)->format('H:i') }}
                                                 @endif
@@ -65,7 +65,7 @@
 
                             </div>
                         </div>
-                        <div class="w-full mb-4 px-6">
+                        <div class="w-full mb-4 px-6 overflow-y-auto">
                             <p class="text-sm text-gray-700">{{ $nextBigEvent->description }}</p>
                         </div>
 

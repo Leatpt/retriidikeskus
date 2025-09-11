@@ -5,9 +5,9 @@
 
             @if ($event)
 
-            <div class="z-40 flex flex-col items-center justify-between w-1/2 min-h-[50vh] bg-white rounded-md">
+            <div class="z-40 flex flex-col items-center justify-between w-full md:w-1/2 max-h-[80vh] min-h-[50vh] bg-white rounded-md">
                 <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
-                    <div class="w-40 flex-initial overflow-hidden mr-6">
+                    <div class="hidden md:block w-40 flex-initial overflow-hidden mr-6">
                         <img
                             src="{{ asset('eventBird.svg') }}"
                             alt="Event Image"
@@ -25,12 +25,12 @@
                                     <x-coolicon-clock class="h-5 w-5" />
                                 </div>
                                 <div class="flex flex-col items-start text-left justify-center">
-                                    <div class="font-semibold">{{ \Carbon\Carbon::parse($event->start_date)->format('d.m') }}
+                                    <div class="font-semibold whitespace-nowrap">{{ \Carbon\Carbon::parse($event->start_date)->format('d.m') }}
                                         @if ($event->start_date != $event->end_date)
                                         - {{ \Carbon\Carbon::parse($event->end_date)->format('d.m') }}
                                         @endif
                                     </div>
-                                    <div class="mt-1">{{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }}
+                                    <div class="mt-1 whitespace-nowrap">{{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }}
                                         @if ($event->start_time != $event->end_time)
                                         - {{ \Carbon\Carbon::parse($event->end_time)->format('H:i') }}
                                         @endif
@@ -56,7 +56,7 @@
 
                     </div>
                 </div>
-                <div class="w-full mb-4 px-6 flex flex-col">
+                <div class="w-full mb-4 px-6 flex flex-col w-full mb-4 px-6 overflow-y-auto">
                     @if ($event->paid === true)
                     <p class="text-sm font-bold text-emerald-700 mb-2">Retriidi osalustasu on {{ $event->price }}€. <span class="text-sm font-semibold text-gray-700 mb-2">Sisaldab ööbimist ja söögikordi.</span></p>
                     <p class="text-sm text-gray-700">{{ $event->description }}</p>
@@ -67,7 +67,7 @@
 
                 <div class="w-full flex justify-end gap-4 p-6 bg-rose-100">
                     @if ($event->category->name === 'Retriit')
-                    <button class="px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 cursor-pointer">Registreeri</button>
+                    <button class="px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 cursor-pointer" wire:click="openRegisterModal">Registreeri</button>
                     <button class="px-4 py-2 bg-whitetext-gray-700 rounded-md hover:bg-gray-100 cursor-pointer"
                         wire:click="$set('showModal', false)">Sulge</button>
                     @else

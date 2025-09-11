@@ -10,6 +10,7 @@ class EventDetailsModal extends Component
 {
     public $event;
     public $showModal = false;
+    public $showRegisterModal = false;
 
     protected $listeners = ['openEventDetails' => 'showEventDetails'];
 
@@ -25,6 +26,13 @@ class EventDetailsModal extends Component
     {
         $this->showModal = false;
         $this->event = null;
+    }
+
+    public function openRegisterModal()
+    {
+        if ($this->event) {
+            $this->dispatch('openRegisterModal', $this->event->toArray());
+        }
     }
 
     public function render()

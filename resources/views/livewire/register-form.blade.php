@@ -42,12 +42,13 @@
                         </div>
                     </div>
 
-                    <form class="flex flex-col items-center justify-center w-full h-full" wire:submit.prevent="register">
+                    <form class="flex flex-col items-center justify-center w-full h-full" wire:submit.prevent="sendRegistrationEmail">
                         <div class="w-full flex flex-col text-start px-8 mb-4">
                             <div class="mt-2 flex flex-col w-full items-start">
-                                <p class="mb-4 text-gray-800">
+                                <p class="mb-2 text-gray-800">
                                     <strong>{{ $eventTitle }}</strong><br>
-                                <p class="mb-4">Osalustasu: <strong>{{ $eventPrice }} €</strong><br></p>
+                                <p class="mb-2">Osalustasu: <strong>{{ $eventPrice }} €</strong><br></p>
+                                <p class="mb-4">Kuupäevad: <strong>{{ $eventDates }}</strong><br></p>
                                 Palume jätta oma nimi ja e-posti aadress. <br>
                                 Kinnituse ja arve saadame Teile kahe tööpäeva jooksul.
                                 </p>
@@ -62,7 +63,7 @@
                                             placeholder="Mari Maasikas"
                                             wire:model="registerName">
                                         </input>
-                                        @error('customerName') <span class="text-red-500 text-sm">{{ $message }}</span>@enderror
+                                        @error('registerName') <span class="text-red-500 text-sm">{{ $message }}</span>@enderror
                                     </div>
                                     <div class="w-full max-w-[330px]">
                                         <label for="registerEmail" class="block mt-2 mb-2 text-sm font-medium text-gray-900">E-mail</label>
@@ -86,7 +87,7 @@
 
                         <div class="bg-rose-100 h-16 w-full flex justify-center items-center">
                             <button type="submit"
-                                class="px-4 py-2 text-white font-bold bg-rose-500 rounded-full hover:bg-rose-600">
+                                class="px-4 py-2 text-white font-bold bg-rose-500 rounded-full hover:bg-rose-600 cursor-pointer">
                                 Saada registreerimine
                             </button>
                         </div>

@@ -16,7 +16,7 @@
                         <h3 class="text-lg font-semibold mt-2">
                             {{ mb_convert_case(\Carbon\Carbon::parse($selectedDate)->translatedFormat('j. F'), MB_CASE_TITLE, "UTF-8") }} - {{ \Str::limit($event->title, 50) }}
                         </h3>
-                        <p class="mt-2 mb-2 text-sm text-gray-600 px-2">{{ \Str::limit($event->description, 160) }}</p>
+                        <p class="mt-2 mb-2 text-sm text-gray-600 px-2">{!! nl2br(\Str::limit($event->description, 160)) !!}</p>
                     </div>
                     <div class="mt-auto mb-4">
                         <button

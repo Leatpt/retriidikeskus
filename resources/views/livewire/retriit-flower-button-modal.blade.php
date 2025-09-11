@@ -65,8 +65,9 @@
 
                             </div>
                         </div>
-                        <div class="w-full mb-4 px-6 overflow-y-auto">
-                            <p class="text-sm text-gray-700">{{ $nextBigEvent->description }}</p>
+                        <div class="w-full mt-4 mb-4 px-6 overflow-y-auto">
+                            <p class="text-md font-bold text-emerald-700 mb-4">Retriidi osalustasu on {{ $nextBigEvent->price }}€. <span class="text-md font-semibold text-gray-700 mb-4">Sisaldab ööbimist ja söögikordi.</span></p>
+                            <p class="text-sm text-gray-700">{!! nl2br($nextBigEvent->description) !!}</p>
                         </div>
 
                         <div class="w-full flex justify-end gap-4 p-6 bg-rose-100">

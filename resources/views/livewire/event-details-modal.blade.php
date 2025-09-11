@@ -56,12 +56,12 @@
 
                     </div>
                 </div>
-                <div class="w-full mb-4 px-6 flex flex-col w-full mb-4 px-6 overflow-y-auto">
+                <div class="w-full mt-4 px-6 flex flex-col w-full mb-4 px-6 overflow-y-auto">
                     @if ($event->paid === true)
-                    <p class="text-sm font-bold text-emerald-700 mb-2">Retriidi osalustasu on {{ $event->price }}€. <span class="text-sm font-semibold text-gray-700 mb-2">Sisaldab ööbimist ja söögikordi.</span></p>
-                    <p class="text-sm text-gray-700">{{ $event->description }}</p>
+                    <p class="text-md font-bold text-emerald-700 mb-4">Retriidi osalustasu on {{ $event->price }}€. <span class="text-md font-semibold text-gray-700 mb-4">Sisaldab ööbimist ja söögikordi.</span></p>
+                    <p class="text-sm text-gray-700">{!! nl2br($event->description) !!}</p>
                     @else
-                    <p class="text-sm text-gray-700">{{ $event->description }}</p>
+                    <p class="text-sm text-gray-700">{!! nl2br($event->description) !!}</p>
                     @endif
                 </div>
 

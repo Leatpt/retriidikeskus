@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $title ?? 'Retriidikeskus' }}</title>
+    <title>{{ $title ?? 'Retriidikeskus - Vaikuseretriidid ja õpikojad Harjumaal' }}</title>
     <meta name="description" content="Avasta Rahvaõpistu retriidid ja õpikojad Harjumaal: süvatraditsiooni kursused, vaikuseretriidid, vaimne kasv, rännakud, laagrid ja töötoad spirituaalsele arengule.">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

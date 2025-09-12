@@ -26,7 +26,7 @@
                             <a href="#"><img class="h-10 w-10" src="{{ asset('Logo.png') }}" alt="Retriidikeskus"></a>
                         </div>
                         <div class="">
-                            <div class="ml-2 sm:ml-10 flex items-baseline space-x-1 md:space-x-4">
+                            <div class="ml-2 sm:ml-10 flex items-baseline space-x-1 sm:space-x-4">
                                 @guest
                                 <x-nav-link href="/#kuukava" :active="request()->is('/#kuukava')">Kuukava</x-nav-link>
                                 <x-nav-link href="/#meist" :active="request()->is('/#meist')">Meist</x-nav-link>

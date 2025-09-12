@@ -23,7 +23,7 @@ class Create extends Component
         $this->form->start_time = '12:00';
         $this->form->end_time = '12:00';
         $this->form->dates[0]['start_date'] = today()->format('Y-m-d');
-        $this->form->dates[0]['end_date']   = today()->format('Y-m-d');
+        $this->form->dates[0]['end_date'] = null;
     }
 
     public function save()

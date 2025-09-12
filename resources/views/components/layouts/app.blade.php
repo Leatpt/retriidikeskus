@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title ?? 'Retriidikeskus - Vaikuseretriidid ja õpikojad Harjumaal' }}</title>
     <meta name="description" content="Avasta Rahvaõpistu retriidid ja õpikojad Harjumaal: süvatraditsiooni kursused, vaikuseretriidid, vaimne kasv, rännakud, laagrid ja töötoad spirituaalsele arengule.">
@@ -111,7 +110,8 @@
         </main>
     </div>
 
-    @livewireScripts
+    @livewireScripts(['defer' => true])
+
 </body>
 
 </html>

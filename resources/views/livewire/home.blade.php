@@ -4,10 +4,23 @@
     </div>
     <div id="top" class="relative">
         <div class="min-h-screen relative bg-lime-50 text-white rounded-br-full overflow-hidden">
-            <img
-                src="{{ asset('oruMainPicture.jpg') }}"
-                alt="welcomeImage"
-                class="absolute inset-0 w-full h-full object-cover z-0">
+            <picture>
+                <source
+                    srcset="/oruMainPicture-w480.jpg 480w,
+                            /oruMainPicture-w800.jpg 800w,
+                            /oruMainPicture-w1280.jpg 1280w,
+                            /oruMainPicture.jpg 1920w"
+                    sizes="100vw"
+                    type="image/jpeg">
+                <img
+                    src="/oruMainPicture.jpg"
+                    alt="welcomeImage"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    width="1920"
+                    height="1080">
+            </picture>
             <div class="absolute inset-0 z-10 pointer-events-none rounded-br-full shadow-[inset_-20px_-20px_40px_rgba(0,0,0,0.9)]">
             </div>
             <div class="relative z-10 flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8">
@@ -192,7 +205,7 @@
                 <div class="flex flex-row items-stretch">
                     <div class="w-1/2 px-6 flex items-center justify-center hidden lg:flex">
                         <div class="rounded-full overflow-hidden aspect-square max-h-[350px] border-4 border-lime-200">
-                            <img src="{{ asset('toetajad.png') }}"
+                            <img src="{{ asset('toetajad.jpg') }}"
                                 alt="Oru mõis"
                                 class="w-full h-full object-cover">
                         </div>
@@ -254,7 +267,7 @@
                     <div>
                         <div class="rounded-full overflow-hidden aspect-square max-h-[200px] border-6 border-emerald-600 hover:border-emerald-800" alt="leia meid">
                             <a href="https://www.google.com/maps/place/Oru+m%C3%B5is/@59.1898759,24.9831921,17z/data=!3m1!4b1!4m6!3m5!1s0x4692db7d85d3b6b5:0xa06618dd62804917!8m2!3d59.1898759!4d24.985767!16s%2Fg%2F11bywvxk7z?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
-                                target="_blank"><x-ionicon-location class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>
+                                target="_blank" aria-label="Vaata Oru mõisa kaardil"><x-ionicon-location class="text-emerald-600 hover:text-emerald-800 w-20 h-20 p-2" /></a>
                         </div>
                     </div>
                 </div>

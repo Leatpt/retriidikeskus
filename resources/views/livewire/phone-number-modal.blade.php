@@ -8,7 +8,7 @@
             <div class="flex justify-center items-center min-h-screen px-4">
                 <div class="z-40 fixed inset-0 bg-emerald-600 opacity-50" wire:click="$set('showModal', false)"></div>
 
-                <div class="z-50 flex flex-col items-center w-7/8 sm:max-w-[650px] min-h-[350px] bg-white rounded-md">
+                <div class="z-50 flex flex-col items-center w-full sm:max-w-[650px] min-h-[350px] bg-white rounded-md">
                     <div class="flex items-center w-full mb-4 bg-lime-100 rounded-md px-4 py-2">
                         <div class="flex flex-col w-full ml-4">
                             <div class="flex items-start justify-between w-full">
@@ -35,7 +35,8 @@
                         <div class="w-1/3 mt-4">
                             <img src="{{ asset('tiia.jpg') }}" alt="Tiia Rodi" class="w-20 h-20 mx-auto mb-2 rounded-full border-2 border-emerald-600" />
                             <h3 class="font-bold">Tiia Rodi</h3>
-                            <p>Info ja raamatupidamine</p>
+                            <p class="block sm:hidden">Info ja raamatu- pidamine</p>
+                            <p class="hidden sm:block">Info ja raamatupidamine</p>
                             <p>Juhatuse liige</p>
                             <p class="text-emerald-600 font-bold">+372 5695 3915</p>
                         </div>

@@ -219,10 +219,16 @@
                         <h3 class="text-xl mb-2 font-bold mt-4">Praegu käsil:</h3>
                         <a href="https://www.facebook.com/oru.rahvaopistu/posts/pfbid06no3ryB62X4WFnMosJ8YUj8idpRi3E5XZpZbTwaK43kEvkQEpvMgU6rGMAxLeppCl" target="_blank">
                             <div class="flex flex-row items-center text-blue-500 hover:text-blue-700 cursor-pointer">
-                                <x-ionicon-logo-facebook class="w-5 h-5" />
-                                <p class="text-lg leading-relaxed text-justify ml-1 underline">
+                                <x-ionicon-logo-facebook class="w-5 h-5 hidden sm:block" />
+                                <p class="hidden sm:block text-lg leading-relaxed text-justify ml-1 underline">
                                     Oru mõisahoone-kogudusemaja köögi renoveerimine
                                 </p>
+
+                                <p class="block sm:hidden text-lg leading-relaxed underline">
+                                    <x-ionicon-logo-facebook class="inline w-5 h-5 mr-1 align-text-bottom" />
+                                    Oru mõisahoone-kogudusemaja köögi renoveerimine
+                                </p>
+
                             </div>
                         </a>
                         <p class="text-lg leading-relaxed text-justify">

@@ -23,8 +23,8 @@
                         <div class="bg-white rounded-xl p-6 text-gray-800 flex justify-center flex-col items-center">
                             <h2 class="text-2xl font-bold text-emerald-700 mb-4">Annetuse pangaandmed</h2>
 
-                            <p class="mb-2"><span class="font-semibold">Saaja nimi:</span> Eesti Evangeelse Luterliku Kiriku Tuhala Kaarli kogudus</p>
-                            <p class="mb-2"><span class="font-semibold">IBAN:</span> EE537700771001980241</p>
+                            <p class="mb-2"><span class="font-semibold">Saaja nimi:</span> Sihtasutus Oru Evangeelne Rahvaõpistu</p>
+                            <p class="mb-2"><span class="font-semibold">IBAN:</span> EE237700771004142620</p>
                             <p class="mb-4"><span class="font-semibold">Selgitus:</span> Annetus</p>
                             <img src="{{ asset('donationThankYou.svg') }}" alt="thank you" class="w-80 mx-auto mt-2" />
 

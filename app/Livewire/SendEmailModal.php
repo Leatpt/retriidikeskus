@@ -54,7 +54,7 @@ class SendEmailModal extends Component
         $validatedData = $this->validate();
 
         try {
-            Mail::to('redealey@gmail.com')->send(new \App\Mail\ContactUsMail($validatedData));
+            Mail::to('tauno.kibur@gmail.com')->send(new \App\Mail\ContactUsMail($validatedData));
 
             $this->reset(['customerName', 'customerEmail', 'customerMessage']);
             session()->flash('success', 'Sõnum saadetud! 🎉');

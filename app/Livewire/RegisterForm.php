@@ -52,7 +52,7 @@ class RegisterForm extends Component
         $validatedData['eventDates'] = $this->eventDates;
 
         try {
-            Mail::to('redealey@gmail.com')->send(new \App\Mail\RegisterMail($validatedData));
+            Mail::to('tauno.kibur@gmail.com')->send(new \App\Mail\RegisterMail($validatedData));
 
             $this->reset(['registerName', 'registerEmail']);
             session()->flash('success', 'Registreerimis Soov Edastatud! 🎉');

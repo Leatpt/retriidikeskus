@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
             'Kasvu Õpikoda',
             'Palvesaladus',
             'Laubaõhta',
-            'Nädalavahetuse Retriit'
+            'Retriit'
         ];
 
         foreach ($categories as $categoryName) {

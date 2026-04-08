@@ -1,4 +1,5 @@
-<div>
+<div class="relative">
+    @if ($nextBigEvent)
     <div>
         <div class="w-60 h-60 pointer-events-none absolute bottom-6 sm:bottom-10 -right-4 sm:right-10 z-15 flex items-center justify-center">
             <img class="w-50 h-50 sm:w-60 sm:h-60 animate-[spin_9s_infinite]" src="{{ asset('flower.svg') }}" alt="flowerOutline">
@@ -77,9 +78,10 @@
                         </div>
                     </div>
                 </div>
-                @else
-                <p>No event details available.</p>
-                @endif
             </div>
+            @endif
         </div>
+
     </div>
+    @endif
+</div>

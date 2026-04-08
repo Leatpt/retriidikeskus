@@ -15,6 +15,11 @@ class RetriitFlowerButtonModal extends Component
 
     protected $listeners = ['openRetriitFlowerButtonModal' => 'showRetriitFlowerButtonModal'];
 
+    public function mount()
+    {
+        $this->getNextBigEvent();
+    }
+
     public function showRetriitFlowerButtonModal()
     {
         $this->getNextBigEvent();

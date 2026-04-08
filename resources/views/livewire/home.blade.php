@@ -2,7 +2,7 @@
     <div class="pointer-events-none absolute top-200 left-0 w-full h-[1700px] z-0">
         <img src="{{ asset('bgShape.svg') }}" class="w-full h-full object-cover" alt="shape" />
     </div>
-    <div id="top" class="relative">
+    <div id="top" class="relative overflow-hidden">
         <div class="min-h-screen relative bg-lime-50 text-white rounded-br-full overflow-hidden">
             <picture>
                 <source
